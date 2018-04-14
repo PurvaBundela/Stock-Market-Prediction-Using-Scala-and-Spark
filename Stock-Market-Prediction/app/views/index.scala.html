@@ -1,0 +1,48 @@
+@import helper._
+
+@import views.html.b4.inline.fieldConstructor
+
+@(userForm: Form[Tuple2[String,String]])(createUserForm : Form[UserFormData])(msg:String)(implicit messages: play.api.i18n.Messages)
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) }
+@implicitFieldConstructor1 = @{ b4.horizontal.fieldConstructor("col-md-2", "col-md-10") }
+
+@main("A sneak peek into the Airbnb") {
+<p>@msg</p>
+@form(action=routes.HomeController.userLogin(),'class -> "form-horizontal" ) {
+@b4.email(userForm("email"),'_label -> "Email", 'id -> "Email")
+@b4.password(userForm("password"),'_label -> "Password", 'id -> "Password")
+<div class="control-group">
+    <div class="controls">
+        <input id="submit" type="submit" value="Login" class="btn btn-primary">
+    </div>
+</div>
+<br/>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">click here to sign
+    up
+</button>
+}
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            @form(action=routes.HomeController.createUser,'class -> "form-horizontal" ) {
+            @b4.text(createUserForm("name"), '_label -> "Name", '_help -> "A Name between 1 and 20 characters")
+            @b4.number(createUserForm("age"), '_label -> "Age", '_help -> "From 18 to 99 years old")
+            @b4.email(createUserForm("email"), '_label -> "Email")
+            @b4.password(createUserForm("password"), '_label -> "Password")
+            <div class="control-group">
+                <div class="controls">
+                    <input id="submit" type="submit" value="Sign Up" class="btn btn-primary">
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    <a href="http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2017-04-02/data/listings.csv.gz">link1</a>
+
+    <a href="http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2017-04-02/visualisations/reviews.csv">link2</a>
+
+</div>
+
+
+}

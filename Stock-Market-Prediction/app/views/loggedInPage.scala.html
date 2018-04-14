@@ -1,0 +1,310 @@
+@(title : Array[Double])
+<!DOCTYPE html>
+<html lang="en" ng-app="loggedInPage">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>@title</title>
+
+            <!-- Bootstrap Core CSS -->
+        <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+
+            <!-- Custom CSS -->
+        <link href="/assets/stylesheets/simple-sidebar.css" rel="stylesheet">
+            <!--<link href="/assets/stylesheets/heroic-features.css" rel="stylesheet">-->
+
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+
+            <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="/assets/javascripts/loggedIn.js"></script>
+        <script src="/assets/javascripts/Chart.js"></script>
+        <script src="/assets/javascripts/angular-chart.js"></script>
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+                <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            Airbnb Analysis
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="showDashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" id="showRecommendation">Find your perfect listing</a>
+                    </li>
+                </ul>
+            </div>
+                <!-- /#sidebar-wrapper -->
+
+                <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row" id="graphs">
+                        <div class="col-lg-12">
+                            <div id="graphs" ng-controller="controller1">
+                                <h1>Insight into Airbnb data</h1>
+                                <p>Hello! There are a lot of things you could do here! </p>
+                                <br><br>
+                                    <!-- Chart 1-->
+                                    <!-- Chart 1-->
+                                <h3>@title</h3>
+                                <div class="row" ng-init="getGraph2()">
+                                    <canvas id="bar" class="chart chart-bar"
+                                    chart-data="data2" chart-labels="labels2">
+                                    </canvas>
+                                </div>
+                                <br><br>
+                                <h3>When does the city get really busy? - City Trend</h3>
+                                <div class="row" ng-init="getGraph3()">
+                                    <canvas id="line" class="chart chart-line" chart-data="data3"
+                                    chart-labels="labels3">
+                                    </canvas>
+                                </div>
+                                <br><br>
+                                <h3>Most active customers</h3>
+                                <div class="row" ng-init="getGraph4()">
+                                    <canvas id="bar" class="chart chart-bar"
+                                    chart-data="data4" chart-labels="labels4">
+                                    </canvas>
+                                </div>
+                                <br><br>
+                                <h3>Average price per room type</h3>
+                                <div class="row" ng-init="getGraph1()">
+                                    <canvas id="bar" class="chart chart-bar"
+                                    chart-data="data1" chart-labels="labels1">
+                                    </canvas>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recommendation" class="hidden">
+                        <h1>We can recommend you the best listings in Boston!!</h1>
+                        <div class="form-group">
+                            <label for="parm1">stay at south end boston - the most popular area</label>
+                            <select class="form-control" id="parm1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+
+                            <label for="parm2">luxurious stay</label>
+                            <select class="form-control" id="parm2">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+
+                            <label for="parm3">near historical places as Boston is known for its history</label>
+                            <select class="form-control" id="parm3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+
+                            <br>
+                            <button type="button" id="fetchRecommendation" class="btn btn-primary" onclick="WebSocketTest()">
+                                Recommend Listings
+                            </button>
+                            <br><br>
+                            <div id="demo"></div>
+                            <br><br>
+
+                            <div id="d01" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d02" class="thumbnail">
+                                    <img id="d03" src="http://placehold.it/800x500" alt="">
+                                    <div id="d04" class="caption">
+                                        <p id="d05">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p>
+                                            <input id="d07" type="hidden" value="">
+                                            <a id="d06" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="d11" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d12" class="thumbnail">
+                                    <img id="d13" src="http://placehold.it/800x500" alt="">
+                                    <div id="d14" class="caption">
+                                        <p id="d15">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p>
+                                            <input id="d17" type="hidden" value="">
+                                            <a id="d16" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="d21" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d22" class="thumbnail">
+                                    <img id="d23" src="http://placehold.it/800x500" alt="">
+                                    <div id="d24" class="caption">
+                                        <p id="d25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d27" type="hidden" value="">
+                                            <a id="d26" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="d31" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d32" class="thumbnail">
+                                    <img id="d33" src="http://placehold.it/800x500" alt="">
+                                    <div id="d34" class="caption">
+                                        <p id="d35">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d37" type="hidden" value="">
+                                            <a id="d36" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d41" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d42" class="thumbnail">
+                                    <img id="d43" src="http://placehold.it/800x500" alt="">
+                                    <div id="d44" class="caption">
+                                        <p id="d45">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d47" type="hidden" value="">
+                                            <a id="d46" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d51" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d52" class="thumbnail">
+                                    <img id="d53" src="http://placehold.it/800x500" alt="">
+                                    <div id="d54" class="caption">
+                                        <p id="d55">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d57" type="hidden" value="">
+                                            <a id="d56" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d61" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="62" class="thumbnail">
+                                    <img id="d63" src="http://placehold.it/800x500" alt="">
+                                    <div id="d64" class="caption">
+                                        <p id="d65">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d67" type="hidden" value="">
+                                            <a id="d66" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d71" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d72" class="thumbnail">
+                                    <img id="d73" src="http://placehold.it/800x500" alt="">
+                                    <div id="d74" class="caption">
+                                        <p id="d75">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d77" type="hidden" value="">
+                                            <a id="d76" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d81" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d82" class="thumbnail">
+                                    <img id="d83" src="http://placehold.it/800x500" alt="">
+                                    <div id="d84" class="caption">
+                                        <p id="d85">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d87" type="hidden" value="">
+                                            <a id="d86" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="d91" class="col-md-3 col-sm-6 hero-feature hidden">
+                                <div id="d92" class="thumbnail">
+                                    <img id="d93" src="http://placehold.it/800x500" alt="">
+                                    <div id="d94" class="caption">
+                                        <p id="d95">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p><input id="d97" type="hidden" value="">
+                                            <a id="d96" href="#" class="btn btn-primary bb">What others think?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- /#page-content-wrapper -->
+
+        </div>
+            <!-- /#wrapper -->
+
+            <!-- jQuery -->
+        <script src="/assets/javascripts/jquery.js"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+        <script src="/assets/javascripts/bootstrap.min.js"></script>
+        <script src="/assets/javascripts/websockets.js"></script>
+
+            <!-- Menu Toggle Script -->
+        <script>
+                $(document).ready(function() {
+                    $("#wrapper").toggleClass("toggled");
+                });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </body>
+
+</html>

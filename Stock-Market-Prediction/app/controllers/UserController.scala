@@ -16,9 +16,6 @@ import scala.concurrent.Future
 class UserController @Inject()() extends Controller {
 
 
-//    def graph1 = Action.async {
-//        Future(Util.Timeseries.abc()) map (x => Ok(Json.toJson(x)))
-//    }
 
 
 }

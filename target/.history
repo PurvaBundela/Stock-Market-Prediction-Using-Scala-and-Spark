@@ -1,0 +1,3 @@
+run
+run play-scala-starter-example-2.6.x
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers" ;*/*:dumpStructureTo C:/Users/Disha/AppData/Local/Temp/sbt-structure.xml; session clear-all

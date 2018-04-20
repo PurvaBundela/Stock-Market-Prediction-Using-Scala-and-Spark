@@ -82,6 +82,9 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
             )
     }
 
+       def demo = Action {
+    Ok(views.html.demo())
+  }                         
 
   def createUser = Action.async {
     implicit request =>

@@ -24,7 +24,6 @@ import org.apache.spark.mllib.linalg.{DenseVector, Vector, Vectors}
 import org.joda.time.LocalDate
 
 import scala.language.postfixOps
-//import shapeless.T
 
 
 

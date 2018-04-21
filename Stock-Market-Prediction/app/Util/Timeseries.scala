@@ -42,13 +42,13 @@ object Timeseries{
 
     val sqlContext = new SQLContext(sc)
 
-    override def main(args: Array[String]) ={
-        trainAndPredictPrice()
-        getTopThreeProfitableCompanies()
-    }
+//    override def main(args: Array[String]) ={
+//        trainAndPredictPrice()
+//        getTopThreeProfitableCompanies()
+//    }
 
     var priceForecast: Array[(String, Vector)] = Array.empty[(String,org.apache.spark.mllib.linalg.Vector)]
-    def trainAndPredictPrice():Map[String, Vector]={
+    def trainAndPredictPrice():Array[String]={
         val spark = SparkSession.builder().appName("Stock-prediction").master("local[*]").getOrCreate();
         import spark.implicits._
         val appleDf: DataFrame = spark
@@ -238,9 +238,9 @@ object Timeseries{
 
         priceForecast = df.collect()
 //        val aaa = df.toDF("symbol","values")
-        val abc = df.collect().toArray
+        val abc = df.collect().map(_._1)
 
-        abc.toMap
+        abc
     }
 
     def createMultipleCompanyValues[String](n: Int, l: List[String]):List[String] = {

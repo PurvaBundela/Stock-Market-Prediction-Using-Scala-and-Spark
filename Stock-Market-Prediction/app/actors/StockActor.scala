@@ -7,6 +7,8 @@ import akka.actor.{Actor, Props}
 import models.User
 import scala.util.{Failure, Success}
 import akka.pattern.pipe
+import Util.Timeseries
+
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -23,7 +25,7 @@ object StockActor {
 class StockActor extends Actor {
 
 
-    val test1 = Util.Timeseries.abc()
+    val test1 = Timeseries.trainAndPredictPrice()
     //Thread.sleep(20000)
     //test1.foreach(x=>println(x))
   def receive: Receive = {

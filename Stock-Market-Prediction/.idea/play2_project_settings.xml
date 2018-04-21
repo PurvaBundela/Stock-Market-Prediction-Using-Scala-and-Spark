@@ -3,24 +3,10 @@
   <component name="Play2ExcludedModulesSettings">
     <option name="INFO">
       <map>
-        <entry key="play-scala-starter-example">
-          <value>
-            <ProjectSettingsEntry>
-              <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.6.13.jar" />
-            </ProjectSettingsEntry>
-          </value>
-        </entry>
-        <entry key="play-scala-starter-example-2-6-x">
-          <value>
-            <ProjectSettingsEntry>
-              <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.6.13.jar" />
-            </ProjectSettingsEntry>
-          </value>
-        </entry>
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
-              <option name="confDir" value="C:\Users\Disha\Downloads\play-scala-starter-example-2.6.x\play-scala-starter-example-2.6.x\app" />
+              <option name="confDir" value="D:\NEU\Sem 4\Scala\FinalProjectRepo\Stock-Market-Prediction-Using-Scala-and-Spark\Stock-Market-Prediction\app" />
               <option name="templateImports">
                 <list>
                   <option value="_root_.play.twirl.api.TwirlFeatureImports._" />
@@ -43,7 +29,14 @@
                   <option value="controllers.Assets.Asset" />
                 </list>
               </option>
-              <option name="uri" value="/C:/Users/Disha/Downloads/play-scala-starter-example-2.6.x/play-scala-starter-example-2.6.x" />
+              <option name="uri" value="/D:/NEU/Sem%204/Scala/FinalProjectRepo/Stock-Market-Prediction-Using-Scala-and-Spark/Stock-Market-Prediction" />
+            </ProjectSettingsEntry>
+          </value>
+        </entry>
+        <entry key="stock-market-prediction">
+          <value>
+            <ProjectSettingsEntry>
+              <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.6.13.jar" />
             </ProjectSettingsEntry>
           </value>
         </entry>

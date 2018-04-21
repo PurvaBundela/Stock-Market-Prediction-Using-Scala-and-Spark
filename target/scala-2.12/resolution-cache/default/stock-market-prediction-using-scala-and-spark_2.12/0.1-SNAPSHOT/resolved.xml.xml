@@ -4,7 +4,7 @@
 		module="stock-market-prediction-using-scala-and-spark_2.12"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20180421173608"
+		publication="20180421191430"
 	>
 		<description>
 		stock-market-prediction-using-scala-and-spark

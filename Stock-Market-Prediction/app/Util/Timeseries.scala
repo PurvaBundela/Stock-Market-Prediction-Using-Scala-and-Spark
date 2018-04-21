@@ -1,3 +1,5 @@
+package Util
+
 import java.io.File
 import java.time.{ZoneId, ZonedDateTime}
 import java.util
@@ -27,7 +29,7 @@ import scala.language.postfixOps
 
 
 
-object Timeseries extends App{
+object Timeseries{
 
     lazy val conf = {
         new SparkConf(false)

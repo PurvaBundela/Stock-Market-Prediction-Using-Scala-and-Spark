@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="HydraSettings">
-    <option name="hydraStorePath" value="C:\Users\Disha\Downloads\play-scala-starter-example-2.6.x\play-scala-starter-example-2.6.x\.hydra\idea" />
+    <option name="hydraStorePath" value="D:\NEU\Sem 4\Scala\FinalProjectRepo\Stock-Market-Prediction-Using-Scala-and-Spark\Stock-Market-Prediction\.hydra\idea" />
     <option name="noOfCores" value="2" />
-    <option name="projectRoot" value="C:\Users\Disha\Downloads\play-scala-starter-example-2.6.x\play-scala-starter-example-2.6.x" />
+    <option name="projectRoot" value="D:\NEU\Sem 4\Scala\FinalProjectRepo\Stock-Market-Prediction-Using-Scala-and-Spark\Stock-Market-Prediction" />
     <option name="sourcePartitioner" value="auto" />
   </component>
 </project>

@@ -67,7 +67,8 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
 //////        }
 ////      )
 //  }
-    val abc = Util.Timeseries.abc()
+    val abc = Util.Timeseries.trainAndPredictPrice()
+
     def userLogin = Action.async {
         implicit request =>
             implicit val timeout: Timeout = Timeout(2 seconds)

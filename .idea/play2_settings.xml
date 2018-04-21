@@ -5,8 +5,8 @@
       <array>
         <option value="_root_.play.twirl.api.Txt" />
         <option value="play.api.templates.PlayMagic._" />
-        <option value="_root_.play.twirl.api.Xml" />
         <option value="_root_.play.twirl.api.JavaScript" />
+        <option value="_root_.play.twirl.api.Xml" />
         <option value="_root_.play.twirl.api.Html" />
         <option value="_root_.play.twirl.api.TwirlHelperImports._" />
         <option value="_root_.play.twirl.api.TwirlFeatureImports._" />

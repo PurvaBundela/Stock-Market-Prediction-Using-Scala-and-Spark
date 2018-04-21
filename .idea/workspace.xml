@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64382b70-6e48-4e6e-8b76-7b31e2ae6c20" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/play2_settings.xml" afterPath="$PROJECT_DIR$/.idea/play2_settings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/Stock-Market-Prediction/app/Util/Timeseries.scala" afterPath="$PROJECT_DIR$/Stock-Market-Prediction/app/Util/Timeseries.scala" />
-      <change beforePath="$PROJECT_DIR$/Stock-Market-Prediction/app/controllers/HomeController.scala" afterPath="$PROJECT_DIR$/Stock-Market-Prediction/app/controllers/HomeController.scala" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Stock-Market-Prediction/.travis.yml" afterPath="$PROJECT_DIR$/Stock-Market-Prediction/.travis.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/play-scala-starter-example-2.6.x/project/project/target/" />
     <ignored path="$PROJECT_DIR$/play-scala-starter-example-2.6.x/project/target/" />
@@ -124,28 +116,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Module.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/app/Module.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockActor.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/app/actors/StockActor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding>
-                <element signature="e#16#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Timeseries.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/app/Util/Timeseries.scala">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,11 +126,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/app/controllers/HomeController.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="69" column="52" lean-forward="false" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+            <state relative-caret-position="316">
+              <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowserSpec.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/test/BrowserSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-63">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FunctionalSpec.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/test/FunctionalSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-603">
+              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -281,6 +271,12 @@
               <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stock-Market-Prediction-Using-Scala-and-Spark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stock-Market-Prediction-Using-Scala-and-Spark" type="462c0819:PsiDirectoryNode" />
+              <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -534,12 +530,12 @@
       <workItem from="1523503004942" duration="6178000" />
       <workItem from="1523587793693" duration="30709000" />
       <workItem from="1523741537778" duration="2050000" />
-      <workItem from="1524346491490" duration="394000" />
+      <workItem from="1524346491490" duration="1801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39331000" />
+    <option name="totallyTimeSpent" value="40738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -600,13 +596,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="79" lean-forward="false" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/app/spark/SparkCommons.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -729,13 +718,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/play-scala-starter-example-2.6.x/test/UnitSpec.scala" />
-    <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/test/FunctionalSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/conf/default/1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -855,7 +837,7 @@
         <state relative-caret-position="459">
           <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
           <folding>
-            <element signature="e#16#50#0" expanded="true" />
+            <element signature="e#16#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -926,8 +908,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/app/controllers/HomeController.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="69" column="52" lean-forward="false" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+        <state relative-caret-position="316">
+          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/test/BrowserSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stock-Market-Prediction/test/FunctionalSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-603">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding />
         </state>
       </provider>

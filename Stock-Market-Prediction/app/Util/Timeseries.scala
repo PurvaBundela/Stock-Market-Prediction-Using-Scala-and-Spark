@@ -228,7 +228,11 @@ object Timeseries extends App{
 
         val priceList = df.collectAsTimeSeries().data.values
 
+        //To save the csv with predicted values of company
         saveCompanyPredictionValues(multipleCompanyValues, priceList)
+
+        //Get most profitable companies
+        getTopThreeProfitableCompanies()
 
         priceForecast = df.collect()
 //        val aaa = df.toDF("symbol","values")

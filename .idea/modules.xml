@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/play-scala-starter-example-2.6.x/.idea/modules/play-scala-starter-example-2-6-x.iml" filepath="$PROJECT_DIR$/play-scala-starter-example-2.6.x/.idea/modules/play-scala-starter-example-2-6-x.iml" />
       <module fileurl="file://$PROJECT_DIR$/play-scala-starter-example-2.6.x/.idea/modules/play-scala-starter-example-2-6-x-build.iml" filepath="$PROJECT_DIR$/play-scala-starter-example-2.6.x/.idea/modules/play-scala-starter-example-2-6-x-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/play-scala-starter-example-2.6.x.iml" filepath="$PROJECT_DIR$/.idea/play-scala-starter-example-2.6.x.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stock-market-prediction-using-scala-and-spark.iml" filepath="$PROJECT_DIR$/.idea/modules/stock-market-prediction-using-scala-and-spark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stock-market-prediction-using-scala-and-spark-build.iml" filepath="$PROJECT_DIR$/.idea/modules/stock-market-prediction-using-scala-and-spark-build.iml" />
     </modules>
   </component>
 </project>

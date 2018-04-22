@@ -8,7 +8,6 @@ scala:
    
 jdk:
 - oraclejdk8
-- oraclejdk9
 
 cache:
   directories:
@@ -20,9 +19,8 @@ script:
   - cd $TRAVIS_BUILD_DIR/Stock-Market-Prediction
   - sbt ++$TRAVIS_SCALA_VERSION clean
   - sbt ++$TRAVIS_SCALA_VERSION test
+  
 before_cache:
-- rm -rf $HOME/.ivy2/cache/com.typesafe.play/*
-- rm -rf $HOME/.ivy2/cache/scala_*/sbt_*/com.typesafe.play/*
 - find $HOME/.ivy2/cache -name "ivydata-*.properties" -print0 | xargs -n10 -0 rm
 
 

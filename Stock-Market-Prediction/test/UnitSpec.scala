@@ -10,11 +10,7 @@ import Util.Timeseries._
 /**
  * Runs a browser test using Fluentium against a play application on a server port.
  */
-class UnitSpec extends PlaySpec
-  with OneBrowserPerTest
-  with GuiceOneServerPerTest
-  with HtmlUnitFactory
-  with ServerProvider {
+class UnitSpec extends PlaySpec {
 
   "SparkContext" should {
 

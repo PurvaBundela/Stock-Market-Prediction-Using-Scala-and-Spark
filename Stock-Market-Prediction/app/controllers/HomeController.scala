@@ -67,7 +67,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
 //////        }
 ////      )
 //  }
-    val abc = Util.Timeseries.trainAndPredictPrice()
+    //val abc = Util.Timeseries.trainAndPredictPrice()
 
     def userLogin = Action.async {
         implicit request =>
@@ -77,7 +77,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
                 userTuple => {
                     loginRouter ? LoginActor.GetUser(userTuple._1, userTuple._2)
                 } map {
-                    case Some(user) => Ok(views.html.loggedInPage(abc)).withSession("user" -> userTuple._1)
+                    case Some(user) => Ok(views.html.loggedInPage()).withSession("user" -> userTuple._1)
                     case None => Ok("Invalid credentials")
                 }
             )

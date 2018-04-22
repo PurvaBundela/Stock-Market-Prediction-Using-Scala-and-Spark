@@ -1,6 +1,7 @@
 package controllers
 
 import javax.inject.Inject
+
 import actors.{LoginActor, StockActor}
 import akka.actor.{ActorSystem, Props}
 import akka.pattern.ask
@@ -15,6 +16,7 @@ import play.api.i18n.{I18nSupport, MessagesApi}
 import play.api.libs.json.JsValue
 import play.api.libs.streams.ActorFlow
 import play.api.mvc._
+import views.{html, _}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
@@ -42,6 +44,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
     //logger.info("User in landing page")
     Ok(views.html.index(FormsData.userForm)(FormsData.createUserForm)(StringUtils.EMPTY))
   }
+
 
 //    val stockRouter = system.actorOf(StockActor.props,"Test")
 //    implicit val timeout: Timeout = 30.seconds
@@ -83,9 +86,35 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
             )
     }
 
-       def demo = Action {
+  //    val stockRouter = system.actorOf(StockActor.props,"Test")
+  //    implicit val timeout: Timeout = 30.seconds
+  //  def userLogin = Action.async {
+  //      implicit request =>
+  //          Supervision.Restart
+  //         println("userlogin")
+  //      (stockRouter ? getStocks("abc")).mapTo[Double].map{
+  //          abc => Ok(views.html.loggedInPage(abc))
+  //      }
+  ////
+  ////
+  //////
+  //////
+  ////      FormsData.userForm.bindFromRequest().fold(
+  ////        formWithErrors => Future.successful(BadRequest),
+  ////          abc => {
+  ////              stockRouter ? StockActor.Stock("abc")
+  ////          }.mapTo[String].map {
+  ////              Ok(views.html.loggedInPage(abc))
+  ////////          case Some(user) =>
+  ////////          case None => Ok("Invalid credentials")
+  //////        }
+  ////      )
+  //  }
+
+
+  def demo = Action {
     Ok(views.html.demo())
-  }                         
+  }
 
   def createUser = Action.async {
     implicit request =>
@@ -96,9 +125,9 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
           val user1 = User(0, user.name, user.age, user.email, user.password)
           loginRouter ? LoginActor.CreateUser(user1)
         } map (someMes => someMes match {
-          case UserActionMessages.emailAlreadyExists => Ok(views.html.index(FormsData.userForm)(FormsData.createUserForm)("Email Id Already Exists"))
-          case UserActionMessages.genericError => Ok(views.html.index(FormsData.userForm)(FormsData.createUserForm)("Unable to create user. Please try again."))
-          case _ => Ok(views.html.index(FormsData.userForm)(FormsData.createUserForm)("User account created! Login to use our service"))
+          case UserActionMessages.emailAlreadyExists => Ok(html.index(FormsData.userForm)(FormsData.createUserForm)("Email Id Already Exists"))
+          case UserActionMessages.genericError => Ok(html.index(FormsData.userForm)(FormsData.createUserForm)("Unable to create user. Please try again."))
+          case _ => Ok(html.index(FormsData.userForm)(FormsData.createUserForm)("User account created! Login to use our service"))
         })
       )
 

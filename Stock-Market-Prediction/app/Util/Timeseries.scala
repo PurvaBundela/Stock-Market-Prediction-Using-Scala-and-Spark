@@ -3,8 +3,6 @@ package Util
 import java.io.File
 import java.time.{ZoneId, ZonedDateTime}
 import java.util
-
-import Timeseries.{getTopThreeProfitableCompanies, trainAndPredictPrice}
 import com.cloudera.sparkts.models.ARIMA
 import com.cloudera.sparkts._
 import com.cloudera.sparkts.{DateTimeIndex, DayFrequency, TimeSeriesRDD}
@@ -35,9 +33,9 @@ object Timeseries extends App{
 
     lazy val conf = {
         new SparkConf(false)
-            .setMaster("local[*]")
-            .setAppName("Stock-prediction")
-            .set("spark.logconf","true")
+          .setMaster("local[*]")
+          .setAppName("Stock-prediction")
+          .set("spark.logconf","true")
     }
 
 
@@ -53,16 +51,20 @@ object Timeseries extends App{
         val spark = SparkSession.builder().appName("Stock-prediction").master("local[*]").getOrCreate();
         import spark.implicits._
         val appleDf: DataFrame = spark
+
             .read
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/AAPL_data_train.csv")
+
         val apple = appleDf.select(appleDf("date").as("appleDate"), appleDf("close").as("closeApple"))
         val applePriceActual = apple.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val appleMean = applePriceActual.map(_.toDouble).sum/applePriceActual.size
         val appleDf1: DataFrame = spark
+
             .read
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/AAPL_ToBe.csv")
+
         val apple1 = appleDf1.select(appleDf1("date").as("appleDate1"), appleDf1("close").as("closeApple1"))
         val applePriceActual1 = apple1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val appleMean1 = applePriceActual1.map(_.toDouble).sum/applePriceActual1.size
@@ -95,6 +97,7 @@ object Timeseries extends App{
         val ebayPriceActual1 = ebay.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val ebayMean1 = ebayPriceActual1.map(_.toDouble).sum/ebayPriceActual1.size
         val expediaDf: DataFrame = spark
+
             .read
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/EXPE_data_train.csv")
@@ -179,33 +182,33 @@ object Timeseries extends App{
         val walmartPriceActual1 = walmart1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val walmartMean1 = walmartPriceActual1.map(_.toDouble).sum/walmartPriceActual1.size
         val data = apple
-            .join(amazon, $"appleDate" === $"amazonDate").select($"appleDate", $"closeApple", $"closeAmazon")
-            .join(ebay, $"appleDate" === $"ebayDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay")
-            .join(expedia, $"appleDate" === $"expediaDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia")
-            .join(facebook, $"appleDate" === $"facebookDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook")
-            .join(google, $"appleDate" === $"googleDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle")
-            .join(microsoft, $"appleDate" === $"microsoftDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle", $"closemicrosoft")
-            .join(tripAdv, $"appleDate" === $"tripAdvDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle", $"closemicrosoft", $"closetripAdv")
-            .join(walmart, $"appleDate" === $"walmartDate").select($"appleDate".as("date"), $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle", $"closemicrosoft", $"closetripAdv", $"closewalmart")
+          .join(amazon, $"appleDate" === $"amazonDate").select($"appleDate", $"closeApple", $"closeAmazon")
+          .join(ebay, $"appleDate" === $"ebayDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay")
+          .join(expedia, $"appleDate" === $"expediaDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia")
+          .join(facebook, $"appleDate" === $"facebookDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook")
+          .join(google, $"appleDate" === $"googleDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle")
+          .join(microsoft, $"appleDate" === $"microsoftDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle", $"closemicrosoft")
+          .join(tripAdv, $"appleDate" === $"tripAdvDate").select($"appleDate", $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle", $"closemicrosoft", $"closetripAdv")
+          .join(walmart, $"appleDate" === $"walmartDate").select($"appleDate".as("date"), $"closeApple", $"closeAmazon", $"closeebay", $"closeexpedia", $"closefacebook", $"closegoogle", $"closemicrosoft", $"closetripAdv", $"closewalmart")
         val formattedData = data
-            .flatMap{
-                row =>
-                    Array(
-                        (row.getString(row.fieldIndex("date")), "apple", row.getString(row.fieldIndex("closeApple"))),
-                        (row.getString(row.fieldIndex("date")), "amazon", row.getString(row.fieldIndex("closeAmazon"))),
-                        (row.getString(row.fieldIndex("date")), "ebay", row.getString(row.fieldIndex("closeebay"))),
-                        (row.getString(row.fieldIndex("date")), "expedia", row.getString(row.fieldIndex("closeexpedia"))),
-                        (row.getString(row.fieldIndex("date")), "facebook", row.getString(row.fieldIndex("closefacebook"))),
-                        (row.getString(row.fieldIndex("date")), "google", row.getString(row.fieldIndex("closegoogle"))),
-                        (row.getString(row.fieldIndex("date")), "microsoft", row.getString(row.fieldIndex("closemicrosoft"))),
-                        (row.getString(row.fieldIndex("date")), "tripAdvisor", row.getString(row.fieldIndex("closetripAdv"))),
-                        (row.getString(row.fieldIndex("date")), "walmart", row.getString(row.fieldIndex("closewalmart")))
-                    )
-            }.toDF("date","symbol","closingPrice")
+          .flatMap{
+              row =>
+                  Array(
+                      (row.getString(row.fieldIndex("date")), "apple", row.getString(row.fieldIndex("closeApple"))),
+                      (row.getString(row.fieldIndex("date")), "amazon", row.getString(row.fieldIndex("closeAmazon"))),
+                      (row.getString(row.fieldIndex("date")), "ebay", row.getString(row.fieldIndex("closeebay"))),
+                      (row.getString(row.fieldIndex("date")), "expedia", row.getString(row.fieldIndex("closeexpedia"))),
+                      (row.getString(row.fieldIndex("date")), "facebook", row.getString(row.fieldIndex("closefacebook"))),
+                      (row.getString(row.fieldIndex("date")), "google", row.getString(row.fieldIndex("closegoogle"))),
+                      (row.getString(row.fieldIndex("date")), "microsoft", row.getString(row.fieldIndex("closemicrosoft"))),
+                      (row.getString(row.fieldIndex("date")), "tripAdvisor", row.getString(row.fieldIndex("closetripAdv"))),
+                      (row.getString(row.fieldIndex("date")), "walmart", row.getString(row.fieldIndex("closewalmart")))
+                  )
+          }.toDF("date","symbol","closingPrice")
         val finalDf = formattedData
-            .withColumn("timestamp",to_timestamp(formattedData("date")))
-            .withColumn("price", formattedData("closingPrice").cast(DoubleType))
-            .drop("date","closingPrice").sort("timestamp")
+          .withColumn("timestamp",to_timestamp(formattedData("date")))
+          .withColumn("price", formattedData("closingPrice").cast(DoubleType))
+          .drop("date","closingPrice").sort("timestamp")
         finalDf.registerTempTable("preData")
 
         val minDate = finalDf.selectExpr("min(timestamp)").collect()(0).getTimestamp(0)
@@ -265,7 +268,7 @@ object Timeseries extends App{
 
         val schema = StructType(
             StructField("Names", StringType, false) ::
-                StructField("Profit", DoubleType, false) :: Nil)
+              StructField("Profit", DoubleType, false) :: Nil)
 
         //Create RDD
         val sc = SparkContext.getOrCreate(conf)
@@ -290,7 +293,7 @@ object Timeseries extends App{
 
         val schema = StructType(
             StructField("Names", StringType, false) ::
-                StructField("Price", DoubleType, false) :: Nil)
+              StructField("Price", DoubleType, false) :: Nil)
 
         //Create RDD
 

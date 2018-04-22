@@ -1,0 +1,23 @@
+language: scala
+
+jdk: oraclejdk8
+
+scala:
+   - 2.11.8
+
+jdk:
+- oraclejdk8
+
+cache:
+  directories:
+  - "$HOME/.ivy2/cache"
+  - "$HOME/.gradle/caches"
+  - "$HOME/.sbt/boot/"
+
+script:
+  - cd $TRAVIS_BUILD_DIR/Stock-Market-Prediction
+  - sbt ++$TRAVIS_SCALA_VERSION clean
+  - sbt ++$TRAVIS_SCALA_VERSION test
+
+before_cache:
+- find $HOME/.ivy2/cache -name "ivydata-*.properties" -print0 | xargs -n10 -0 rm

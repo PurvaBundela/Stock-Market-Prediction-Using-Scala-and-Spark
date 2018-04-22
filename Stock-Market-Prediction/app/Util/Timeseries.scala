@@ -30,6 +30,7 @@ import scala.language.postfixOps
 
 object Timeseries extends App{
 
+
     lazy val conf = {
         new SparkConf(false)
           .setMaster("local[*]")
@@ -37,142 +38,146 @@ object Timeseries extends App{
           .set("spark.logconf","true")
     }
 
-    val sc = SparkContext.getOrCreate(conf)
 
-    val sqlContext = new SQLContext(sc)
 
     override def main(args: Array[String]) ={
         trainAndPredictPrice()
         getTopThreeProfitableCompanies()
     }
 
+
     var priceForecast: Array[(String, Vector)] = Array.empty[(String,org.apache.spark.mllib.linalg.Vector)]
     def trainAndPredictPrice():Array[String]={
         val spark = SparkSession.builder().appName("Stock-prediction").master("local[*]").getOrCreate();
         import spark.implicits._
         val appleDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("AAPL_data_train.csv")
+
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/AAPL_data_train.csv")
+
         val apple = appleDf.select(appleDf("date").as("appleDate"), appleDf("close").as("closeApple"))
         val applePriceActual = apple.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val appleMean = applePriceActual.map(_.toDouble).sum/applePriceActual.size
         val appleDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("AAPL_ToBe.csv")
+
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/AAPL_ToBe.csv")
+
         val apple1 = appleDf1.select(appleDf1("date").as("appleDate1"), appleDf1("close").as("closeApple1"))
         val applePriceActual1 = apple1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val appleMean1 = applePriceActual1.map(_.toDouble).sum/applePriceActual1.size
         val amazonDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("AMZN_data_train.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/AMZN_data_train.csv")
         val amazon = amazonDf.select(amazonDf("date").as("amazonDate"), amazonDf("close").as("closeAmazon"))
         val amazonPriceActual = amazon.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val amazonMean = amazonPriceActual.map(_.toDouble).sum/amazonPriceActual.size
         val amazonDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("AMZN_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/AMZN_ToBe.csv")
         val amazon1 = amazonDf1.select(amazonDf1("date").as("amazonDate1"), amazonDf1("close").as("closeamazon"))
         val amazonPriceActual1 = amazon1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val amazonMean1 = amazonPriceActual1.map(_.toDouble).sum/amazonPriceActual1.size
         val ebayDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("EBAY_data_train.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/EBAY_data_train.csv")
         val ebay = ebayDf.select(ebayDf("date").as("ebayDate"), ebayDf("close").as("closeebay"))
         val ebayPriceActual = ebay.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val ebayMean = ebayPriceActual.map(_.toDouble).sum/ebayPriceActual.size
         val ebayDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("EBAY_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/EBAY_ToBe.csv")
         val ebay1 = ebayDf1.select(ebayDf1("date").as("ebayDate1"), ebayDf1("close").as("closeebay1"))
         val ebayPriceActual1 = ebay.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val ebayMean1 = ebayPriceActual1.map(_.toDouble).sum/ebayPriceActual1.size
         val expediaDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("EXPE_data_train.csv")
+
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/EXPE_data_train.csv")
         val expedia = expediaDf.select(expediaDf("date").as("expediaDate"), expediaDf("close").as("closeexpedia"))
         val expediaPriceActual = expedia.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val expediaMean = expediaPriceActual.map(_.toDouble).sum/expediaPriceActual.size
         val expediaDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("EXPE_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/EXPE_ToBe.csv")
         val expedia1 = expediaDf1.select(expediaDf1("date").as("expediaDate1"), expediaDf1("close").as("closeexpedia1"))
         val expediaPriceActual1 = expedia1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val expediaMean1 = expediaPriceActual1.map(_.toDouble).sum/expediaPriceActual1.size
         val facebookDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("FB_data_train.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/FB_data_train.csv")
         val facebook = facebookDf.select(facebookDf("date").as("facebookDate"), facebookDf("close").as("closefacebook"))
         val facebookPriceActual = facebook.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val facebookMean = facebookPriceActual.map(_.toDouble).sum/facebookPriceActual.size
         val facebookDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("FB_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/FB_ToBe.csv")
         val facebook1 = facebookDf1.select(facebookDf1("date").as("facebookDate1"), facebookDf1("close").as("closefacebook1"))
         val facebookPriceActual1 = facebook1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val facebookMean1 = facebookPriceActual1.map(_.toDouble).sum/facebookPriceActual1.size
         val googleDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("GOOGL_data_train.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/GOOGL_data_train.csv")
         val google = googleDf.select(googleDf("date").as("googleDate"), googleDf("close").as("closegoogle"))
         val googlePriceActual = google.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val googleMean = googlePriceActual.map(_.toDouble).sum/googlePriceActual.size
         val googleDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("GOOGL_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/GOOGL_ToBe.csv")
         val google1 = googleDf1.select(googleDf1("date").as("googleDate1"), googleDf1("close").as("closegoogle1"))
         val googlePriceActual1 = google1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val googleMean1 = googlePriceActual1.map(_.toDouble).sum/googlePriceActual1.size
         val microsoftDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("MSFT_data_train.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/MSFT_data_train.csv")
         val microsoft = microsoftDf.select(microsoftDf("date").as("microsoftDate"), microsoftDf("close").as("closemicrosoft"))
         val microsoftPriceActual = microsoft.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val microsoftMean = microsoftPriceActual.map(_.toDouble).sum/microsoftPriceActual.size
         val microsoftDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("MSFT_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/MSFT_ToBe.csv")
         val microsoft1 = microsoftDf1.select(microsoftDf1("date").as("microsoftDate1"), microsoftDf1("close").as("closemicrosoft1"))
         val microsoftPriceActual1 = microsoft1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val microsoftMean1 = microsoftPriceActual1.map(_.toDouble).sum/microsoftPriceActual1.size
         val tripAdvDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("TRIP_data_train.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/TRIP_data_train.csv")
         val tripAdv = tripAdvDf.select(tripAdvDf("date").as("tripAdvDate"), tripAdvDf("close").as("closetripAdv"))
         val tripAdvPriceActual = tripAdv.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val tripAdvMean = tripAdvPriceActual.map(_.toDouble).sum/tripAdvPriceActual.size
         val tripAdvDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("TRIP_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/TRIP_ToBe.csv")
         val tripAdv1 = tripAdvDf1.select(tripAdvDf1("date").as("tripAdvDate1"), tripAdvDf1("close").as("closetripAdv1"))
         val tripAdvPriceActual1 = tripAdv1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val tripAdvMean1 = tripAdvPriceActual1.map(_.toDouble).sum/tripAdvPriceActual1.size
         val walmartDf: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("WMT_data_train.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/WMT_data_train.csv")
         val walmart = walmartDf.select(walmartDf("date").as("walmartDate"), walmartDf("close").as("closewalmart"))
         val walmartPriceActual = walmart.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val walmartMean = walmartPriceActual.map(_.toDouble).sum/walmartPriceActual.size
         val walmartDf1: DataFrame = spark
-          .read
-          .option("header", "true")
-          .csv("WMT_ToBe.csv")
+            .read
+            .option("header", "true")
+            .csv("../Stock-Market-Prediction/app/WMT_ToBe.csv")
         val walmart1 = walmartDf1.select(walmartDf1("date").as("walmartDate1"), walmartDf1("close").as("closewalmart1"))
         val walmartPriceActual1 = walmart1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val walmartMean1 = walmartPriceActual1.map(_.toDouble).sum/walmartPriceActual1.size
@@ -229,14 +234,16 @@ object Timeseries extends App{
 
         val priceList = df.collectAsTimeSeries().data.values
 
+        priceForecast = df.collect()
+
         //To save the csv with predicted values of company
         saveCompanyPredictionValues(multipleCompanyValues, priceList)
 
         //Get most profitable companies
         getTopThreeProfitableCompanies()
 
-        priceForecast = df.collect()
-        //        val aaa = df.toDF("symbol","values")
+
+//        val aaa = df.toDF("symbol","values")
         val abc = df.collect().map(_._1)
 
         abc
@@ -264,6 +271,8 @@ object Timeseries extends App{
               StructField("Profit", DoubleType, false) :: Nil)
 
         //Create RDD
+        val sc = SparkContext.getOrCreate(conf)
+        val sqlContext = new SQLContext(sc)
         val rdd = sc.parallelize (test).map (x => Row(x._2, x._1.asInstanceOf[Number].doubleValue()))
 
 
@@ -287,8 +296,13 @@ object Timeseries extends App{
               StructField("Price", DoubleType, false) :: Nil)
 
         //Create RDD
-        val rdd = sc.parallelize (zip).map (x => Row(x._1, x._2.asInstanceOf[Number].doubleValue()))
+
+
+
+        val sc = SparkContext.getOrCreate(conf)
+
         val sqlContext = new SQLContext(sc)
+        val rdd = sc.parallelize (zip).map (x => Row(x._1, x._2.asInstanceOf[Number].doubleValue()))
 
         //Create the dataframe from RDD and convert the data to CSV
         val df1 = sqlContext.createDataFrame(rdd, schema).coalesce(1).write.partitionBy("Names").format("com.databricks.spark.csv").save("abc")

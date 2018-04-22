@@ -4,7 +4,7 @@
 		module="stock-market-prediction-using-scala-and-spark$sources"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20180421173608"
+		publication="20180421191431"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

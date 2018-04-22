@@ -45,6 +45,47 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
     Ok(views.html.index(FormsData.userForm)(FormsData.createUserForm)(StringUtils.EMPTY))
   }
 
+
+//    val stockRouter = system.actorOf(StockActor.props,"Test")
+//    implicit val timeout: Timeout = 30.seconds
+//  def userLogin = Action.async {
+//      implicit request =>
+//          Supervision.Restart
+//         println("userlogin")
+//      (stockRouter ? getStocks("abc")).mapTo[Double].map{
+//          abc => Ok(views.html.loggedInPage(abc))
+//      }
+////
+////
+//////
+//////
+////      FormsData.userForm.bindFromRequest().fold(
+////        formWithErrors => Future.successful(BadRequest),
+////          abc => {
+////              stockRouter ? StockActor.Stock("abc")
+////          }.mapTo[String].map {
+////              Ok(views.html.loggedInPage(abc))
+////////          case Some(user) =>
+////////          case None => Ok("Invalid credentials")
+//////        }
+////      )
+//  }
+    //val abc = Util.Timeseries.trainAndPredictPrice()
+
+    def userLogin = Action.async {
+        implicit request =>
+            implicit val timeout: Timeout = Timeout(2 seconds)
+            FormsData.userForm.bindFromRequest().fold(
+                formWithErrors => Future.successful(BadRequest),
+                userTuple => {
+                    loginRouter ? LoginActor.GetUser(userTuple._1, userTuple._2)
+                } map {
+                    case Some(user) => Ok(views.html.loggedInPage()).withSession("user" -> userTuple._1)
+                    case None => Ok("Invalid credentials")
+                }
+            )
+    }
+
   //    val stockRouter = system.actorOf(StockActor.props,"Test")
   //    implicit val timeout: Timeout = 30.seconds
   //  def userLogin = Action.async {
@@ -69,21 +110,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
   //////        }
   ////      )
   //  }
-  val abc = Util.Timeseries.trainAndPredictPrice()
 
-  def userLogin = Action.async {
-    implicit request =>
-      implicit val timeout: Timeout = Timeout(2 seconds)
-      FormsData.userForm.bindFromRequest().fold(
-        formWithErrors => Future.successful(BadRequest),
-        userTuple => {
-          loginRouter ? LoginActor.GetUser(userTuple._1, userTuple._2)
-        } map {
-          case Some(user) => Ok(views.html.loggedInPage(abc)).withSession("user" -> userTuple._1)
-          case None => Ok("Invalid credentials")
-        }
-      )
-  }
 
   def demo = Action {
     Ok(views.html.demo())

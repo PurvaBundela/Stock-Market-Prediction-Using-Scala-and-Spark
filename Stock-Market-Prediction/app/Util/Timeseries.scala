@@ -30,12 +30,8 @@ import scala.language.postfixOps
 
 
 
-object Timeseries extends App{
+object Timeseries{
 
-    override def main(args: Array[String]) ={
-        trainAndPredictPrice()
-        //getTopThreeProfitableCompanies()
-    }
 
     lazy val conf = {
         new SparkConf(false)

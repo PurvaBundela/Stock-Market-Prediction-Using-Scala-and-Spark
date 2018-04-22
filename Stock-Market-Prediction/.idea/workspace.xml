@@ -44,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Timeseries.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Timeseries.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Util/Timeseries.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="135">
+              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
               <folding>
                 <element signature="e#14#33#0" expanded="true" />
               </folding>
@@ -92,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/test/UnitSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -429,12 +429,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524352866128</updated>
       <workItem from="1524352867663" duration="4061000" />
-      <workItem from="1524356970678" duration="3901000" />
+      <workItem from="1524356970678" duration="4153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7962000" />
+    <option name="totallyTimeSpent" value="8214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -486,7 +486,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/app/Util/Timeseries.scala</url>
-          <line>259</line>
+          <line>255</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -605,20 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Util/Timeseries.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding>
-            <element signature="e#14#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/UnitSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -649,6 +639,16 @@
           <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
             <element signature="e#21#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Util/Timeseries.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="e#14#33#0" expanded="true" />
           </folding>
         </state>
       </provider>

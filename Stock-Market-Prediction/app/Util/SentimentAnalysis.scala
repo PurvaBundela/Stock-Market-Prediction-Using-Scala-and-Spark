@@ -70,17 +70,6 @@ object SentimentAnalysis {
 
     if (catchlog == true) RedwoodConfiguration.current().clear().apply()
 
-    //println("debug: main: " + mainSentiment)
-    //println("debug: avg: " + averageSentiment)
-    //println("debug: weighted: " + weightedSentiment)
-
-    /*
-     0 -> very negative
-     1 -> negative
-     2 -> neutral
-     3 -> positive
-     4 -> very positive
-     */
     weightedSentiment
 
   }

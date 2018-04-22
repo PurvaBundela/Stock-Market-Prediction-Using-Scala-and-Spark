@@ -42,8 +42,6 @@ object TwitterRequest {
       val keyword = if (args.size > 1) args.tail.mkString(" ") else ""
 
       args(0) match {
-        case "hashtags" => Usecases.popularHashTags(keyword)
-        case "map" => Usecases.popularLocations(keyword)
         case "stock" => runStock(keyword)
         case _ => println("Invalid input. Please refer to README.md in our repo for input parameter.")
       }

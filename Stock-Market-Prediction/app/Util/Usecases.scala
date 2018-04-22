@@ -1,12 +1,13 @@
 package Util
 
-import Util.{Ingest, Response}
+
 import Util.SentimentAnalysis
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkContext
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.twitter.TwitterUtils
 import twitter4j._
+import Util.{Ingest, Response}
 
 import scala.io.{Codec, Source}
 

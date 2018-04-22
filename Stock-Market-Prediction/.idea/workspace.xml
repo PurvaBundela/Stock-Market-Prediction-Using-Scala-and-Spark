@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd7df7a1-0757-497c-9745-4d9350769700" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/abc/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=amazon/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=amazon/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=apple/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=apple/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=ebay/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=ebay/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=expedia/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=expedia/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=facebook/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=facebook/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=google/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=google/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=microsoft/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=microsoft/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=tripAdvisor/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=tripAdvisor/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=walmart/.part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/Names=walmart/part-00000-77dbfea2-6937-4ba3-856a-fc3ba09dcc57.c000.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/abc/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/profit/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/profit/.part-00000-c4c951af-dd12-4181-8e38-0db25108b828-c000.csv.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/profit/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/profit/part-00000-c4c951af-dd12-4181-8e38-0db25108b828-c000.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -51,12 +28,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomeController.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2457">
               <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-493">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -405,12 +395,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524418838219</updated>
-      <workItem from="1524418845689" duration="2446000" />
+      <workItem from="1524418845689" duration="2590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2446000" />
+    <option name="totallyTimeSpent" value="2590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -514,6 +504,17 @@
         <state relative-caret-position="2457">
           <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-493">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

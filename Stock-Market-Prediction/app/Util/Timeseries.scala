@@ -30,7 +30,7 @@ import scala.language.postfixOps
 
 
 
-object Timeseries{
+object Timeseries extends App{
 
 
     lazy val conf = {
@@ -42,10 +42,11 @@ object Timeseries{
 
 
 
-//    override def main(args: Array[String]) ={
-//        trainAndPredictPrice()
-//        getTopThreeProfitableCompanies()
-//    }
+    override def main(args: Array[String]) ={
+        trainAndPredictPrice()
+        getTopThreeProfitableCompanies()
+    }
+
 
     var priceForecast: Array[(String, Vector)] = Array.empty[(String,org.apache.spark.mllib.linalg.Vector)]
     def trainAndPredictPrice():Array[String]={

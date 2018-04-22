@@ -1,8 +1,5 @@
 [![Build Status](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark.svg?branch=master)](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark)
-<<<<<<< HEAD
 =======
-
->>>>>>> bf02aaf7f531e1cc6b0f8fb08f4181ac5e00161e
 # Stock-Market-Prediction-Using-Scala-and-Spark
 ## Dataset
 SNAP Twitter7 dataset

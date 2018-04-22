@@ -46,10 +46,10 @@ object Timeseries{
 //        trainAndPredictPrice()
 //        getTopThreeProfitableCompanies()
 //    }
-
+    val spark = SparkSession.builder().appName("Stock-prediction").master("local[*]").getOrCreate();
     var priceForecast: Array[(String, Vector)] = Array.empty[(String,org.apache.spark.mllib.linalg.Vector)]
     def trainAndPredictPrice():Array[String]={
-        val spark = SparkSession.builder().appName("Stock-prediction").master("local[*]").getOrCreate();
+
         import spark.implicits._
         val appleDf: DataFrame = spark
             .read

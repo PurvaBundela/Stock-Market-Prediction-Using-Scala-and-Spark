@@ -12,7 +12,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 object StockActor {
-    def props = Props[StockActor]
+  def props = Props[StockActor]
 
   case class Stock(name: String)
 
@@ -23,20 +23,20 @@ object StockActor {
 class StockActor extends Actor {
 
 
-    val test1 = Util.Timeseries.abc()
-    //Thread.sleep(20000)
-    //test1.foreach(x=>println(x))
+  val test1 = Util.Timeseries.trainAndPredictPrice()
+  //Thread.sleep(20000)
+  //test1.foreach(x=>println(x))
   def receive: Receive = {
     case Stock(name:String) =>
-        sender() ! name
+      sender() ! name
 
     case getStocks(test:String) => {
-        print("in getsticks")
-        val a = test1
-        //a.foreach(x=>x.toString().concat())
-        //Thread.sleep(20000)
+      print("in getsticks")
+      val a = test1
+      //a.foreach(x=>x.toString().concat())
+      //Thread.sleep(20000)
 
-        sender() ! a
+      sender() ! a
 
 
     }

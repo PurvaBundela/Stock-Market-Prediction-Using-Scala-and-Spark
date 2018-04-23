@@ -112,8 +112,20 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
   //  }
 
 
-  def demo = Action {
-    Ok(views.html.demo())
+  def recomendation = Action {
+    Ok(views.html.recomendation())
+  }
+  def home = Action {
+    Ok(views.html.loggedInPage())
+  }
+  def differences = Action {
+    Ok(views.html.differences())
+  }
+  def twitter = Action {
+    Ok(views.html.twitter())
+  }
+  def profit = Action {
+    Ok(views.html.profit())
   }
 
   def createUser = Action.async {

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+        <!-- Bootstrap Core CSS -->
+    <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+    <link href="/assets/stylesheets/simple-sidebar.css" rel="stylesheet">
+        <!--<link href="/assets/stylesheets/heroic-features.css" rel="stylesheet">-->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+
+        <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+</head>
+<style> /* set the CSS */
+
+
+
+.bar--positive {
+    fill: steelblue;
+}
+
+.bar--negative {
+    fill: darkorange;
+}
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+</style>
+<body>
+    <div id="wrapper">
+
+            <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                            Stock Analysis
+                    </a>
+                </li>
+                <li>
+                    <a href="home" id="showDashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="recomendation" id="showRecommendation">Find your perfect listing</a>
+                </li>
+                <li>
+                    <a href="differences" id="showDifference">Actual V/S Predicted</a>
+                </li>
+                <li>
+                    <a href="twitter" id="">Twitter Analysis</a>
+                </li>
+                <li>
+                    <a href="profit" id="">Profit Analysis</a>
+                </li>
+            </ul>
+        </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row" id="graphs">
+                    <div class="col-lg-12">
+                        <div id="recommendation" >
+                            <h1>You can see the most profitable Stocks !!</h1>
+                            <div class="form-group">
+
+
+                                <div id="b">
+
+
+                                </div>
+
+                                <br>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                    <!-- /#page-content-wrapper -->
+
+            </div>
+        </div>
+    </div>
+</body>
+
+    <!-- load the d3.js library -->
+<script type=
+"text/javascript" src="http://d3js.org/d3.v3.min.js">
+</script>
+
+<script>
+
+var margin = {top: 20, right: 30, bottom: 40, left: 30},
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+        .range([0, width]);
+
+var y = d3.scale.ordinal()
+        .rangeRoundBands([0, height], 0.1);
+
+var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .tickSize(0)
+        .tickPadding(6);
+
+var svg = d3.select("#b").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("assets/profit.csv", type, function(error, data) {
+    x.domain(d3.extent(data, function(d) { return d.value; })).nice();
+    y.domain(data.map(function(d) { return d.name; }));
+
+    svg.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", function(d) { return "bar bar--" + (d.value < 0 ? "negative" : "positive"); })
+            .attr("x", function(d) { return x(Math.min(0, d.value)); })
+            .attr("y", function(d) { return y(d.name); })
+            .attr("width", function(d) { return Math.abs(x(d.value) - x(0)); })
+            .attr("height", y.rangeBand());
+
+    svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+    svg.append("g")
+            .attr("class", "y axis")
+            .attr("transform", "translate(" + x(0) + ",0)")
+            .call(yAxis);
+});
+
+function type(d) {
+    d.value = +d.value;
+    return d;
+}
+
+</script>
+
+<script src="/assets/javascripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+<script src="/assets/javascripts/bootstrap.min.js"></script>
+<script src="/assets/javascripts/websockets.js"></script>
+
+    <!-- Menu Toggle Script -->
+<script>
+                $(document).ready(function() {
+                    $("#wrapper").toggleClass("toggled");
+                });
+
+        </script>
+
+
+

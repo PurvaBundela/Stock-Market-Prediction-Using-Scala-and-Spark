@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title></title>
+
+    <!-- Bootstrap Core CSS -->
+  <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+  <link href="/assets/stylesheets/simple-sidebar.css" rel="stylesheet">
+    <!--<link href="/assets/stylesheets/heroic-features.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+    <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+</head>
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  /*  pointer-events: none;    This line needs to be removed */
+
+}
+
+</style>
+<body>
+<div id="wrapper">
+
+    <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+                            Airbnb Analysis
+        </a>
+      </li>
+      <li>
+        <a href="home" id="showDashboard">Dashboard</a>
+      </li>
+      <li>
+        <a href="recomendation" id="showRecommendation">Find your perfect listing</a>
+      </li>
+      <li>
+        <a href="differences" id="showDifference">Actual V/S Predicted</a>
+      </li>
+      <li>
+        <a href="twitter" id="">Twitter Analysis</a>
+      </li>
+      <li>
+        <a href="profit" id="">Profit Analysis</a>
+      </li>
+    </ul>
+  </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row" id="graphs">
+        <div class="col-lg-12">
+          <div id="recommendation" >
+            <h1>We can help you to be next Warren Buffett !!</h1>
+            <div class="form-group">
+              <label for="parm1">Please select the Company you want to </label>
+              <select class="form-control" id="parm1">
+                <option>Apple</option>
+                <option>Amazon</option>
+                <option>Expedia</option>
+                <option>TripAdvisor</option>
+                <option>Google</option>
+                <option>Ebay</option>
+                <option>FaceBook</option>
+                <option>MicroSoft</option>
+                <option>Walmart</option>
+              </select>
+
+
+
+              <br>
+              <button type="button" id="fetchRecommendation" class="btn btn-primary" onclick="Prediction()">
+                                Recommend Listings
+              </button>
+
+              <div id="a">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+    <!-- load the d3.js library -->
+  <script type=
+  "text/javascript" src="http://d3js.org/d3.v3.min.js">
+</script>
+
+  <script>
+function Prediction() {
+
+  $( "#a" ).empty();
+// Set the dimensions of the canvas / graph
+  var margin = {top: 30, right: 20, bottom: 30, left: 50},
+          width = 900 - margin.left - margin.right,
+          height = 870 - margin.top - margin.bottom;
+
+// Parse the date / time
+  var parseDate = d3.time.format("%m/%d/%Y").parse;
+  var formatTime = d3.time.format("%e %B");// Format tooltip date / time
+
+// Set the rangestrann
+  var x = d3.time.scale().range([0, width]);
+  var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+  var xAxis = d3.svg.axis().scale(x)
+          .orient("bottom").ticks(20);
+
+  var yAxis = d3.svg.axis().scale(y)
+          .orient("left").ticks(30);
+
+// Define the line
+  var valueline = d3.svg.line()
+          .x(function (d) {
+            return x(d.date);
+          })
+          .y(function (d) {
+            return y(d.close );
+          });
+
+// Define 'div' for tooltips
+  var div = d3.select("#a")
+          .append("div")  // declare the tooltip div
+          .attr("class", "tooltip")
+          .style("opacity", 0);
+
+// Adds the svg canvas
+  var svg = d3.select("#a")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+
+
+  d3.csv("assets/" + $('select#parm1 option:selected').val() + ".csv", function (error, data) {
+    data.forEach(function (d) {
+      d.date = parseDate(d.date);
+      d.close = +d.close;
+    });
+
+    // Scale the range of the data
+    x.domain(d3.extent(data, function (d) {
+      return d.date;
+    }));
+    y.domain([0, d3.max(data, function (d) {
+      return d.close +10 ;
+    })]);
+
+    // Add the valueline path.
+    svg.append("path")
+            .attr("class", "line")
+            .attr("d", valueline(data));
+
+    // draw the scatterplot
+    svg.selectAll("dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("r", 5)
+            .attr("cx", function (d) {
+              return x(d.date);
+            })
+            .attr("cy", function (d) {
+              return y(d.close);
+            })
+            // Tooltip stuff after this
+            .on("mouseover", function (d) {
+              div.transition()
+                      .duration(500)
+                      .style("opacity", 0);
+              div.transition()
+                      .duration(200)
+                      .style("opacity", .9);
+              div.html(
+                      '<a href= "' + d.link + '" target="_blank">' + //with a link
+                      formatTime(d.date) +
+                      "</a>" +
+                      "<br/>" + d.close)
+                      .style("left", (d3.event.pageX) + "px")
+                      .style("top", (d3.event.pageY - 28) + "px");
+            });
+
+    // Add the X Axis
+    svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+  });
+}
+</script>
+<script src="/assets/javascripts/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+<script src="/assets/javascripts/bootstrap.min.js"></script>
+<script src="/assets/javascripts/websockets.js"></script>
+
+  <!-- Menu Toggle Script -->
+<script>
+                $(document).ready(function() {
+                  $("#wrapper").toggleClass("toggled");
+                });
+
+        </script>
+
+
+

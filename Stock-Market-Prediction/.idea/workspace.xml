@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e235b890-7a10-4e48-a034-5b67b2630581" name="Default" comment="" />
+    <list default="true" id="35ebdd07-6e84-4614-979c-aef0395e8ee7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -19,84 +19,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="profit.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/profit.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-368">
-              <caret line="88" column="70" lean-forward="false" selection-start-line="88" selection-start-column="70" selection-end-line="88" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recomendation.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/recomendation.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="87" column="11" lean-forward="false" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="twitter.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/twitter.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="96" column="68" lean-forward="false" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userMain.scala.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/userMain.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1277">
-              <caret line="132" column="30" lean-forward="false" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loggedInPage.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/loggedInPage.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1260">
-              <caret line="71" column="25" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="71" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="differences.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/differences.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1129">
-              <caret line="84" column="54" lean-forward="false" selection-start-line="84" selection-start-column="54" selection-end-line="84" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#1#16#0#Scala" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -106,18 +34,6 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/views/loggedInPage.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/differences.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/profit.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/recomendation.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/twitter.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/userMain.scala.html" />
-      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -131,18 +47,19 @@
       <array>
         <option value="_root_.play.twirl.api.Txt" />
         <option value="play.api.templates.PlayMagic._" />
-        <option value="_root_.play.twirl.api.JavaScript" />
         <option value="_root_.play.twirl.api.Xml" />
+        <option value="_root_.play.twirl.api.JavaScript" />
         <option value="_root_.play.twirl.api.Html" />
         <option value="_root_.play.twirl.api.TwirlHelperImports._" />
         <option value="_root_.play.twirl.api.TwirlFeatureImports._" />
       </array>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -160,8 +77,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,19 +87,15 @@
             <path>
               <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,7 +200,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1524472144825" />
+    <option name="lastUpdateTimestamp" value="1524475660051" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -319,32 +230,22 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../../AirBnB-Recommendation-System-master/airbnb" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../CSYE7200-master/assignment-web-crawler" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../CSYE7200/assignment-functional-composition" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../CSYE7200/assignment-helloworld" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../CSYE7200/assignment-movie-database" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../CSYE7200/lab-sorted" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../CSYE7200_FinalProject_Team2_Spring2017-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../IdeaProjects/Final_Project" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../New-York-Taxi-Trip-Analysis-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../Stock-Market-Prediction-Using-Scala-and-Spark-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../Stock-Market-Prediction-Using-Scala-and-Spark-master/Stock-Market-Prediction" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../Stock-Price-Predictor-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../Stock_Prediction_Scala-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../hi-stock-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../play-scala-starter-example-2.6.x/play-scala-starter-example-2.6.x" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../play-scala-streaming-example" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../play-scala-streaming-example-2.5.x" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../play-scala-websocket-example-2.6.x" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../scala/recfun" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../scalaaa/Stock-Market-Prediction-Using-Scala-and-Spark-master/Stock-Market-Prediction" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../stock-quoter-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../twitter-sentiment-analysis-master" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/CSYE7200/assignment-helloworld" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/CSYE7200/assignment-movie-database" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/CSYE7200/assignment-random-state" value="PREVIEW" />
-        <entry key="$USER_HOME$/Documents/CSYE7200/example" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/assignment-functional-composition" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/assignment-movie-database" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/assignment-web-crawler" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/lab-sorted" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/CSYE7200-master (1)/CSYE7200-master/assignment-movie-database" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/CSYE7200-master (1)/CSYE7200-master/assignment-web-crawler" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/CSYE7200-master (1)/CSYE7200-master/lab-awscloudformation" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/CSYE7200-master/CSYE7200-master/assignment-web-crawler" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/example/example" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/play-scala-starter-example-2.6.x/play-scala-starter-example-2.6.x" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/play-scala-starter-example/play-scala-starter-example" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/recfun/recfun" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Assignments/Assignment5/assignment-web-crawler/assignment-web-crawler" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/.." value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Repo/assignment-movie-database" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Repo/assignment-random-state" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -356,20 +257,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e235b890-7a10-4e48-a034-5b67b2630581" name="Default" comment="" />
-      <created>1524472060109</created>
+      <changelist id="35ebdd07-6e84-4614-979c-aef0395e8ee7" name="Default" comment="" />
+      <created>1524475609417</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1524472060109</updated>
-      <workItem from="1524472062042" duration="398000" />
+      <updated>1524475609417</updated>
+      <workItem from="1524475610958" duration="72000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398000" />
+    <option name="totallyTimeSpent" value="72000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -378,7 +279,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -392,7 +293,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -417,68 +318,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/differences.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1129">
-          <caret line="84" column="54" lean-forward="false" selection-start-line="84" selection-start-column="54" selection-end-line="84" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#16#0#Scala" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/loggedInPage.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1260">
-          <caret line="71" column="25" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="71" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/profit.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="88" column="70" lean-forward="false" selection-start-line="88" selection-start-column="70" selection-end-line="88" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/recomendation.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="87" column="11" lean-forward="false" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/twitter.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="96" column="68" lean-forward="false" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/userMain.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1277">
-          <caret line="132" column="30" lean-forward="false" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
           <folding />
         </state>
       </provider>

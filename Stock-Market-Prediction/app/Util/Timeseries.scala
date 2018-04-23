@@ -3,6 +3,7 @@ package Util
 import java.io.File
 import java.time.{ZoneId, ZonedDateTime}
 import java.util
+
 import com.cloudera.sparkts.models.ARIMA
 import com.cloudera.sparkts._
 import com.cloudera.sparkts.{DateTimeIndex, DayFrequency, TimeSeriesRDD}
@@ -42,12 +43,13 @@ object Timeseries extends App{
 
     override def main(args: Array[String]) ={
         trainAndPredictPrice()
-        getTopThreeProfitableCompanies()
     }
 
 
-    var priceForecast: Array[(String, Vector)] = Array.empty[(String,org.apache.spark.mllib.linalg.Vector)]
+
     def trainAndPredictPrice():Array[String]={
+
+
         val spark = SparkSession.builder().appName("Stock-prediction").master("local[*]").getOrCreate();
         import spark.implicits._
         val appleDf: DataFrame = spark
@@ -66,7 +68,7 @@ object Timeseries extends App{
             .csv("../Stock-Market-Prediction/app/AAPL_ToBe.csv")
 
         val apple1 = appleDf1.select(appleDf1("date").as("appleDate1"), appleDf1("close").as("closeApple1"))
-        val applePriceActual1 = apple1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val applePriceActual1: Array[Double] = apple1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val appleMean1 = applePriceActual1.map(_.toDouble).sum/applePriceActual1.size
         val amazonDf: DataFrame = spark
             .read
@@ -80,7 +82,7 @@ object Timeseries extends App{
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/AMZN_ToBe.csv")
         val amazon1 = amazonDf1.select(amazonDf1("date").as("amazonDate1"), amazonDf1("close").as("closeamazon"))
-        val amazonPriceActual1 = amazon1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val amazonPriceActual1: Array[Double] = amazon1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val amazonMean1 = amazonPriceActual1.map(_.toDouble).sum/amazonPriceActual1.size
         val ebayDf: DataFrame = spark
             .read
@@ -94,7 +96,7 @@ object Timeseries extends App{
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/EBAY_ToBe.csv")
         val ebay1 = ebayDf1.select(ebayDf1("date").as("ebayDate1"), ebayDf1("close").as("closeebay1"))
-        val ebayPriceActual1 = ebay.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val ebayPriceActual1: Array[Double] = ebay.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val ebayMean1 = ebayPriceActual1.map(_.toDouble).sum/ebayPriceActual1.size
         val expediaDf: DataFrame = spark
 
@@ -109,7 +111,7 @@ object Timeseries extends App{
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/EXPE_ToBe.csv")
         val expedia1 = expediaDf1.select(expediaDf1("date").as("expediaDate1"), expediaDf1("close").as("closeexpedia1"))
-        val expediaPriceActual1 = expedia1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val expediaPriceActual1: Array[Double] = expedia1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val expediaMean1 = expediaPriceActual1.map(_.toDouble).sum/expediaPriceActual1.size
         val facebookDf: DataFrame = spark
             .read
@@ -123,7 +125,7 @@ object Timeseries extends App{
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/FB_ToBe.csv")
         val facebook1 = facebookDf1.select(facebookDf1("date").as("facebookDate1"), facebookDf1("close").as("closefacebook1"))
-        val facebookPriceActual1 = facebook1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val facebookPriceActual1: Array[Double] = facebook1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val facebookMean1 = facebookPriceActual1.map(_.toDouble).sum/facebookPriceActual1.size
         val googleDf: DataFrame = spark
             .read
@@ -137,7 +139,7 @@ object Timeseries extends App{
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/GOOGL_ToBe.csv")
         val google1 = googleDf1.select(googleDf1("date").as("googleDate1"), googleDf1("close").as("closegoogle1"))
-        val googlePriceActual1 = google1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val googlePriceActual1: Array[Double] = google1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val googleMean1 = googlePriceActual1.map(_.toDouble).sum/googlePriceActual1.size
         val microsoftDf: DataFrame = spark
             .read
@@ -151,7 +153,7 @@ object Timeseries extends App{
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/MSFT_ToBe.csv")
         val microsoft1 = microsoftDf1.select(microsoftDf1("date").as("microsoftDate1"), microsoftDf1("close").as("closemicrosoft1"))
-        val microsoftPriceActual1 = microsoft1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val microsoftPriceActual1: Array[Double] = microsoft1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val microsoftMean1 = microsoftPriceActual1.map(_.toDouble).sum/microsoftPriceActual1.size
         val tripAdvDf: DataFrame = spark
             .read
@@ -165,21 +167,21 @@ object Timeseries extends App{
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/TRIP_ToBe.csv")
         val tripAdv1 = tripAdvDf1.select(tripAdvDf1("date").as("tripAdvDate1"), tripAdvDf1("close").as("closetripAdv1"))
-        val tripAdvPriceActual1 = tripAdv1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val tripAdvPriceActual1: Array[Double] = tripAdv1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val tripAdvMean1 = tripAdvPriceActual1.map(_.toDouble).sum/tripAdvPriceActual1.size
         val walmartDf: DataFrame = spark
             .read
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/WMT_data_train.csv")
         val walmart = walmartDf.select(walmartDf("date").as("walmartDate"), walmartDf("close").as("closewalmart"))
-        val walmartPriceActual = walmart.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val walmartPriceActual: Array[Double] = walmart.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val walmartMean = walmartPriceActual.map(_.toDouble).sum/walmartPriceActual.size
         val walmartDf1: DataFrame = spark
             .read
             .option("header", "true")
             .csv("../Stock-Market-Prediction/app/WMT_ToBe.csv")
         val walmart1 = walmartDf1.select(walmartDf1("date").as("walmartDate1"), walmartDf1("close").as("closewalmart1"))
-        val walmartPriceActual1 = walmart1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
+        val walmartPriceActual1: Array[Double] = walmart1.collect().flatMap((row: Row) => Array(try{row.getString(1).toDouble} catch {case _ : Throwable => 0.0}))
         val walmartMean1 = walmartPriceActual1.map(_.toDouble).sum/walmartPriceActual1.size
         val data = apple
           .join(amazon, $"appleDate" === $"amazonDate").select($"appleDate", $"closeApple", $"closeAmazon")
@@ -233,14 +235,20 @@ object Timeseries extends App{
         val multipleCompanyValues = createMultipleCompanyValues(noOfDays,companyList)
 
         val priceList = df.collectAsTimeSeries().data.values
+        //val priceForecast1: Array[(String, Vector)] = Array.empty[(String,org.apache.spark.mllib.linalg.Vector)]
+        val priceForecast = df.collect()
 
-        priceForecast = df.collect()
+        //Create an array of actual values of stock prices of all companies
+        val actualPrices =Array(applePriceActual1,walmartPriceActual1,amazonPriceActual1,expediaPriceActual1,tripAdvPriceActual1,googlePriceActual1,microsoftPriceActual1,facebookPriceActual1,ebayPriceActual1)
+
+        calculateRMSE(actualPrices, priceForecast, 8)
+        calculateAccuracy(actualPrices, priceForecast, 8)
 
         //To save the csv with predicted values of company
         saveCompanyPredictionValues(multipleCompanyValues, priceList)
 
         //Get most profitable companies
-        getTopThreeProfitableCompanies()
+        getTopThreeProfitableCompanies(priceForecast)
 
 
 //        val aaa = df.toDF("symbol","values")
@@ -254,7 +262,7 @@ object Timeseries extends App{
     }
 
     //Get the companies based on their profits for last 30 days
-    def getTopThreeProfitableCompanies():Unit={
+    def getTopThreeProfitableCompanies(priceForecast: Array[(String, Vector)]):Array[(Double, String)]={
 
         //Convert the data for multiple days to its profit based on last and first values
         val priceDiff = priceForecast.map(x => x._2).map(x=>x(x.size-1)-x(0))
@@ -278,6 +286,8 @@ object Timeseries extends App{
 
         //Create the dataframe from RDD and convert the data to CSV
         val df1 = sqlContext.createDataFrame(rdd, schema).coalesce(1).write.format("com.databricks.spark.csv").save("profit")
+
+        test
     }
 
     //Save the predicted data to CSV
@@ -305,8 +315,85 @@ object Timeseries extends App{
         val rdd = sc.parallelize (zip).map (x => Row(x._1, x._2.asInstanceOf[Number].doubleValue()))
 
         //Create the dataframe from RDD and convert the data to CSV
-        val df1 = sqlContext.createDataFrame(rdd, schema).coalesce(1).write.partitionBy("Names").format("com.databricks.spark.csv").save("abc")
+        val df1 = sqlContext.createDataFrame(rdd, schema).coalesce(1).write.partitionBy("Names").format("com.databricks.spark.csv").save("CompanyPredict")
 
 
     }
+
+    def calculateRMSE(actualPrice: Array[Array[Double]],priceForecast: Array[(String, Vector)], noOfDays: Int ):Unit={
+
+
+    }
+
+    def calculateAccuracy(actualPrice: Array[Array[Double]],priceForecast: Array[(String, Vector)], noOfDays: Int ):Unit={
+//        val priceForecast1 = priceForecast.map(_._2)
+//        var totalErrorSquare1 = 0.0
+//        for (/*j <- 0 until actualPrice.size; */i <- 0 until 29) {
+//            println(actualPrice(0)(0))
+//            val errorSquare = Math.abs(priceForecast1(j)(i) - actualPrice(j)(i))/actualPrice(j)(i)
+//            println(priceForecast1(j)(i) + "\t should be \t" + actualPrice(j)(i) + "\t Error Square = " + errorSquare)
+//            totalErrorSquare1 += errorSquare
+//        }
+//        val accuracy = totalErrorSquare1/(30)
+//        println("Accuracy: " + (accuracy * 100) + "%")
+
+        val priceForecast1 = priceForecast.map(_._2)
+        var totalErrorSquare = 0.0
+        var totalErrorSquare1 = 0.0
+        for (j <- 0 until actualPrice.size; i <- 0 until noOfDays) {
+            val errorSquare = Math.pow(priceForecast1(j)(i) - actualPrice(j)(i), 2)
+            val errorSquare1 = Math.abs(priceForecast1(j)(i) - actualPrice(j)(i))/actualPrice(j)(i)
+            println(priceForecast1(j)(i) + "\t should be \t" + actualPrice(j)(i) + "\t Error Square = " + errorSquare)
+            totalErrorSquare += errorSquare
+            totalErrorSquare1 += errorSquare1
+        }
+
+        println("Root Mean Square Error: " + (Math.sqrt(totalErrorSquare/(noOfDays*9))))
+        println("Accuracy: " + (totalErrorSquare1/(noOfDays*9)) * 1000 + "%")
+        println("Hello")
+
+    }
+
+//    def calculateAccuracy():Unit={
+//        //df.registerTempTable("data")
+//        //df.collect.foreach(println)
+//        val priceForecast = df.collect().map(_._2)
+//
+//        //val priceForecast:Array[Double] = (df.select("values").rdd.map(r => r(0).asInstanceOf[Double])).collect()
+//        //val priceForecast = Array(94.72696689187683,92.84354859087416,92.13168005225876,91.86261777543973,91.76092131762485,91.7224834895712,91.70795528812516,91.70246411841178,91.70038864162733,91.69960418146535)
+//        //val priceForecast = priceForecast1.map(_.)
+//        //        var totalErrorSquare = 0.0
+//        //        for (i <- 0 until priceForecast(0).size) {
+//        //            val errorSquare = Math.pow(priceForecast(0)(i) - priceActual(i), 2)
+//        //            println(priceForecast(0)(i) + "\t should be \t" + priceActual(i) + "\t Error Square = " + errorSquare)
+//        //            totalErrorSquare += errorSquare
+//        //        }
+//        //        println("Root Mean Square Error: " + Math.sqrt(totalErrorSquare/10))
+//
+//        //        var totalErrorSquare2 = 0.0
+//        //        for (i <- (priceForecast.size - 10) until priceForecast.size) {
+//        //            val errorSquare = Math.pow(priceForecast(i) - mean1, 2)
+//        //            totalErrorSquare2 += errorSquare
+//        //        }
+//        //
+//        //        var totalErrorSquare3 = 0.0
+//        //        for (i <- (priceForecast.size - 10) until priceForecast.size) {
+//        //            val errorSquare = Math.pow(priceForecast(i) - priceActual(i), 2)
+//        //            //println(priceForecast(i) + "\t should be \t" + priceActual(i) + "\t Error Square = " + errorSquare)
+//        //            totalErrorSquare3 += errorSquare
+//        //        }
+//        //
+//        //        val r2 = 1-(totalErrorSquare3/totalErrorSquare2)
+//        //        println("R2"+r2)
+//
+//        var totalErrorSquare1 = 0.0
+//        for (i <- 0 until priceForecast(0).size) {
+//        val errorSquare = Math.abs(priceForecast(0)(i) - priceActual(i))/priceActual(i)
+//        //println(priceForecast(i) + "\t should be \t" + priceActual(i) + "\t Error Square = " + errorSquare)
+//        totalErrorSquare1 += errorSquare
+//    }
+//        println("MAPE: " + Math.sqrt(totalErrorSquare1/10))
+//    }
+//}
+//    }
 }

@@ -13,3 +13,6 @@ applied Stanford NLP to do sentiment analysis on twitter data
 applied Spark-ML to train a linear regression model
 
 assessed the accuracy with R square and RMSE
+
+##Presentation 
+https://prezi.com/view/Lr7sPPoyMfhfscPKTesr/

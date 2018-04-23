@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.googlecode.efficient-java-matrix-library:ejml:0.23:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.googlecode.efficient-java-matrix-library/ejml/jars/ejml-0.23.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.googlecode.efficient-java-matrix-library/ejml/srcs/ejml-0.23-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

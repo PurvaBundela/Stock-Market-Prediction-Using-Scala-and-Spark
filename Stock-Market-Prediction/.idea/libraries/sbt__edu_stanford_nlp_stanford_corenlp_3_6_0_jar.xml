@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt: edu.stanford.nlp:stanford-corenlp:3.6.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.stanford.nlp/stanford-corenlp/jars/stanford-corenlp-3.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

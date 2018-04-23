@@ -14,5 +14,5 @@ applied Spark-ML to train a linear regression model
 
 assessed the accuracy with R square and RMSE
 
-##Presentation 
+## Presentation 
 https://prezi.com/view/Lr7sPPoyMfhfscPKTesr/

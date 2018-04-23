@@ -6,7 +6,7 @@
 @implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) }
 @implicitFieldConstructor1 = @{ b4.horizontal.fieldConstructor("col-md-2", "col-md-10") }
 
-@main("A sneak peek into the Airbnb") {
+@main("Stock Market Analysis") {
 <p>@msg</p>
 @form(action=routes.HomeController.userLogin(),'class -> "form-horizontal" ) {
 @b4.email(userForm("email"),'_label -> "Email", 'id -> "Email")
@@ -38,9 +38,6 @@
             }
         </div>
     </div>
-    <a href="http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2017-04-02/data/listings.csv.gz">link1</a>
-
-    <a href="http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2017-04-02/visualisations/reviews.csv">link2</a>
 
 </div>
 

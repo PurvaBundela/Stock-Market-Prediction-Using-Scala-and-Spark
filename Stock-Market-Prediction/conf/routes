@@ -7,9 +7,12 @@ GET     /                           controllers.HomeController.index
 # An example controller showing how to use dependency injection
 
 
-GET      /demo                      controllers.HomeController.demo
+GET      /recomendation                      controllers.HomeController.recomendation
 POST    /login                      controllers.HomeController.userLogin
-
+GET    /home                     controllers.HomeController.home
+GET    /differences              controllers.HomeController.differences
+GET    /twitter              controllers.HomeController.twitter
+GET    /profit              controllers.HomeController.profit
 POST    /signUp                     controllers.HomeController.createUser
 
 # Map static resources from the /public folder to the /assets URL path

@@ -9,13 +9,11 @@ import edu.stanford.nlp.sentiment.SentimentCoreAnnotations
 import edu.stanford.nlp.util.logging.RedwoodConfiguration
 import scala.collection.JavaConversions._
 
-
-
 /**
   *
   * reference:https://github.com/vspiewak/twitter-sentiment-analysis/blob/master/src/main/scala/com/github/vspiewak/util/SentimentAnalysisUtils.scala
   */
-object SentimentAnalysis {
+object SentimentUtils {
 
   val nlpProps = {
     val props = new Properties()
@@ -70,6 +68,17 @@ object SentimentAnalysis {
 
     if (catchlog == true) RedwoodConfiguration.current().clear().apply()
 
+    //println("debug: main: " + mainSentiment)
+    //println("debug: avg: " + averageSentiment)
+    //println("debug: weighted: " + weightedSentiment)
+
+    /*
+     0 -> very negative
+     1 -> negative
+     2 -> neutral
+     3 -> positive
+     4 -> very positive
+     */
     weightedSentiment
 
   }

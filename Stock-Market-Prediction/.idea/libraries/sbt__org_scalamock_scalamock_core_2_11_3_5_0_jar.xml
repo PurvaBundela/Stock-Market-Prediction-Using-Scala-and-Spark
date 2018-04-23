@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.scalamock:scalamock-core_2.11:3.5.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock-core_2.11/jars/scalamock-core_2.11-3.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock-core_2.11/srcs/scalamock-core_2.11-3.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

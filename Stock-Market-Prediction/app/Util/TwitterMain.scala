@@ -61,11 +61,9 @@ object TwitterMain {
     val sqlContext = new SQLContext(sc)
     val rdd = sc.parallelize (res).map (x => Row(x._2, x._1.asInstanceOf[Number].doubleValue()))
 
-
     //Create the dataframe from RDD and convert the data to CSV
     val df1 = sqlContext.createDataFrame(rdd, schema).coalesce(1).write.format("com.databricks.spark.csv").save("twitter")
   }
-
 
   def getFromKeywordSingleDay(i: DateTime,k: String, count: Int): String = {
     val consumer = new CommonsHttpOAuthConsumer(ConsumerKey, ConsumerSecret)

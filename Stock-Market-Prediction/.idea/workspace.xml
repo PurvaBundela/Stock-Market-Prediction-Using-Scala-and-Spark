@@ -18,27 +18,54 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <leaf>
+      <file leaf-file-name="TimeseriesTest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Util/TimeseriesTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding>
+                <element signature="e#14#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SentimentAnalysisTest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Util/SentimentAnalysisTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-155">
+              <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Timeseries.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Util/Timeseries.scala">
+      <file leaf-file-name="CalcAvgScoreTest.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Util/CalcAvgScoreTest.scala">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="6345">
               <caret line="247" column="0" lean-forward="false" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+=======
+            <state relative-caret-position="342">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="SentimentAnalysis.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Util/SentimentAnalysis.scala">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,22 +125,77 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
               <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+=======
+      <file leaf-file-name="twitter.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/twitter.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/application.conf">
+      <file leaf-file-name="CalcAvgScore.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Util/CalcAvgScore.scala">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterMain.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Util/TwitterMain.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="69" column="58" lean-forward="false" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+              <folding>
+                <element signature="e#14#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="737">
+              <caret line="496" column="0" lean-forward="false" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
+              <folding>
+                <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+                <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FunctionalSpec.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/FunctionalSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="9612">
               <caret line="356" column="34" lean-forward="false" selection-start-line="356" selection-start-column="34" selection-end-line="356" selection-end-column="34" />
+=======
+            <state relative-caret-position="90">
+              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -125,10 +207,27 @@
       <list>
         <option value="$PROJECT_DIR$/app/Util/Timeseries.scala" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/services/SparkTsService.scala" />
         <option value="$PROJECT_DIR$/app/Util/CalcAvgScore.scala" />
         <option value="$PROJECT_DIR$/app/controllers/HomeController.scala" />
         <option value="$PROJECT_DIR$/app/actors/StockActor.scala" />
+=======
+        <option value="$PROJECT_DIR$/app/views/profit.scala.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/profit.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/twitter.js" />
+        <option value="$PROJECT_DIR$/app/views/twitter.scala.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/differences.js" />
+        <option value="$PROJECT_DIR$/app/views/differences.scala.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/loggedin.js" />
+        <option value="$PROJECT_DIR$/app/views/loggedInPage.scala.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/recommendation.js" />
+        <option value="$PROJECT_DIR$/app/views/recomendation.scala.html" />
+        <option value="$PROJECT_DIR$/test/Util/CalcAvgScoreTest.java" />
+        <option value="$PROJECT_DIR$/test/Util/SentimentAnalysisTest.scala" />
+        <option value="$PROJECT_DIR$/app/Util/TwitterMain.scala" />
+        <option value="$PROJECT_DIR$/test/Util/CalcAvgScoreTest.scala" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
       </list>
     </option>
   </component>
@@ -172,9 +271,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+      <pane id="AndroidView" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,17 +289,13 @@
             <path>
               <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="actors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -209,29 +309,34 @@
               <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="spark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="Util" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
             </path>
             <path>
               <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-market-prediction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stock-Market-Prediction" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="AndroidView" />
+=======
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,7 +358,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="ScalaTest.CalcAvgScoreTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -302,6 +407,36 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
     </configuration>
+    <configuration name="CalcAvgScoreTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="root" />
+      <setting name="path" value="Util.CalcAvgScoreTest" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Class" />
+      <setting name="path" value="Util.CalcAvgScoreTest" />
+    </configuration>
+    <configuration name="SentimentAnalysisTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="root" />
+      <setting name="path" value="Util.SentimentAnalysisTest" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Class" />
+      <setting name="path" value="Util.SentimentAnalysisTest" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -335,6 +470,16 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.SentimentAnalysisTest" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.CalcAvgScoreTest" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.CalcAvgScoreTest" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.SentimentAnalysisTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="lastUpdateTimestamp" value="1524539534252" />
@@ -367,10 +512,14 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/assignment-functional-composition" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/assignment-movie-database" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/assignment-web-crawler" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/Scala_repo/CSYE7200-master/lab-sorted" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Assignments/Assignment5/assignment-web-crawler/assignment-web-crawler" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Repo/assignment-movie-database" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Repo/assignment-random-state" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Scala_repo/CSYE7200-master/assignment-functional-composition" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Scala_repo/CSYE7200-master/assignment-movie-database" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Scala_repo/CSYE7200-master/assignment-web-crawler" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Scala_repo/CSYE7200-master/lab-sorted" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/.." value="PREVIEW" />
         <entry key="$USER_HOME$/Downloads/CSYE7200-master (1)/CSYE7200-master/assignment-movie-database" value="PREVIEW" />
         <entry key="$USER_HOME$/Downloads/CSYE7200-master (1)/CSYE7200-master/assignment-web-crawler" value="PREVIEW" />
         <entry key="$USER_HOME$/Downloads/CSYE7200-master (1)/CSYE7200-master/lab-awscloudformation" value="PREVIEW" />
@@ -379,10 +528,6 @@
         <entry key="$USER_HOME$/Downloads/play-scala-starter-example-2.6.x/play-scala-starter-example-2.6.x" value="PREVIEW" />
         <entry key="$USER_HOME$/Downloads/play-scala-starter-example/play-scala-starter-example" value="PREVIEW" />
         <entry key="$USER_HOME$/Downloads/recfun/recfun" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../Assignments/Assignment5/assignment-web-crawler/assignment-web-crawler" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/.." value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../Repo/assignment-movie-database" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../Repo/assignment-random-state" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -398,13 +543,51 @@
       <created>1524539494642</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1524539494642</updated>
       <workItem from="1524539496074" duration="1721000" />
       <workItem from="1524551479373" duration="361000" />
+=======
+      <updated>1524530442567</updated>
+      <workItem from="1524530444137" duration="3464000" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CalcAvgScoreTest - 2018.04.24 at 01h 22m 44s.xml">
+      <configuration name="CalcAvgScoreTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalcAvgScoreTest - 2018.04.24 at 01h 24m 16s.xml">
+      <configuration name="CalcAvgScoreTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalcAvgScoreTest - 2018.04.24 at 01h 29m 25s.xml">
+      <configuration name="CalcAvgScoreTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalcAvgScoreTest - 2018.04.24 at 01h 31m 03s.xml">
+      <configuration name="CalcAvgScoreTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CalcAvgScoreTest - 2018.04.24 at 01h 38m 22s.xml">
+      <configuration name="CalcAvgScoreTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="SentimentAnalysisTest - 2018.04.24 at 01h 16m 58s.xml">
+      <configuration name="SentimentAnalysisTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="SentimentAnalysisTest - 2018.04.24 at 01h 17m 43s.xml">
+      <configuration name="SentimentAnalysisTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="SentimentAnalysisTest - 2018.04.24 at 01h 18m 28s.xml">
+      <configuration name="SentimentAnalysisTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="SentimentAnalysisTest - 2018.04.24 at 01h 19m 25s.xml">
+      <configuration name="SentimentAnalysisTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="SentimentAnalysisTest - 2018.04.24 at 01h 19m 44s.xml">
+      <configuration name="SentimentAnalysisTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="2082000" />
   </component>
   <component name="ToolWindowManager">
@@ -429,12 +612,43 @@
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+    <option name="totallyTimeSpent" value="5546000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -456,6 +670,43 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/FunctionalSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/TimeseriesTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#14#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/SentimentAnalysisTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="161" column="78" lean-forward="false" selection-start-line="161" selection-start-column="78" selection-end-line="161" selection-end-column="78" />
+          <folding>
+            <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -492,7 +743,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -500,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9612">
           <caret line="356" column="34" lean-forward="false" selection-start-line="356" selection-start-column="34" selection-end-line="356" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,44 +775,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Util/SentimentAnalysis.scala">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="377">
           <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding>
             <element signature="e#14#41#0" expanded="true" />
+=======
+        <state relative-caret-position="162">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Util/Timeseries.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-436">
+          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/CalcAvgScoreTest.java" />
+    <entry file="file://$PROJECT_DIR$/app/Util/SentimentAnalysis.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/TimeseriesTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#14#43#0" expanded="true" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Util/TwitterMain.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
             <element signature="e#14#41#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="496" column="0" lean-forward="false" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
+          <folding>
+            <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Util/CalcAvgScore.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="27" />
+=======
+    <entry file="file://$PROJECT_DIR$/public/twitter.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/SentimentAnalysisTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="43" column="3" lean-forward="false" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/Util/CalcAvgScore.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/actors/StockActor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="25" column="49" lean-forward="false" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/Util/TwitterMain.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="69" column="58" lean-forward="false" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+          <folding>
+            <element signature="e#14#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/CalcAvgScoreTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+>>>>>>> 61767c00795ce6a028c18c506b32858ad1d7c481
           <folding />
         </state>
       </provider>

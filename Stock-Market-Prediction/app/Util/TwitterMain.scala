@@ -8,7 +8,7 @@ import org.apache.http.impl.client.HttpClientBuilder
 import com.github.nscala_time.time.Imports._
 import com.github.nscala_time.time._
 import org.apache.spark.SparkContext
-import org.apache.spark.sql.{Row, SQLContext}
+import org.apache.spark.sql.{Row, SQLContext, SaveMode}
 import org.apache.spark.sql.types.{DoubleType, StringType, StructField, StructType}
 
 
@@ -62,7 +62,7 @@ object TwitterMain {
     val rdd = sc.parallelize (res).map (x => Row(x._2, x._1.asInstanceOf[Number].doubleValue()))
 
     //Create the dataframe from RDD and convert the data to CSV
-    val df1 = sqlContext.createDataFrame(rdd, schema).coalesce(1).write.format("com.databricks.spark.csv").save("twitter")
+    val df1 = sqlContext.createDataFrame(rdd, schema).coalesce(1).write.format("com.databricks.spark.csv").mode(SaveMode.Overwrite).save("twitter")
   }
 
   def getFromKeywordSingleDay(i: DateTime,k: String, count: Int): String = {

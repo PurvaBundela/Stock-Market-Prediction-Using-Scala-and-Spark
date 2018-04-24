@@ -39,9 +39,7 @@ Using Spark Streaming to receive the stream of tweets and perform the analysis f
 ## Steps to run the project on the local machine
 
 
-## Continuous Integration
 
-This project is using Travis CI as the continuous integration tool  [![Build Status](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark.svg?branch=master)](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ca8d184a3abc4c1eb0d570df9a75ab33)](https://www.codacy.com/app/dishanks9/Stock-Market-Prediction-Using-Scala-and-Spark_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark&amp;utm_campaign=Badge_Grade)
 ## Dataset
 SNAP Twitter7 dataset
 
@@ -62,6 +60,9 @@ applied Stanford NLP to do sentiment analysis on twitter data
 applied Spark-ML to train a Timeseries model
 
 assessed the accuracy with R square and RMSE
+## Continuous Integration
+
+This project is using Travis CI as the continuous integration tool  [![Build Status](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark.svg?branch=master)](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ca8d184a3abc4c1eb0d570df9a75ab33)](https://www.codacy.com/app/dishanks9/Stock-Market-Prediction-Using-Scala-and-Spark_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark&amp;utm_campaign=Badge_Grade)
 
 
 

@@ -248,7 +248,7 @@ object Timeseries extends App{
 
     //To create dataframe based on CSV
     def createDataFrame(name: String):DataFrame = {
-        return spark.read.option("header", "true").csv(s"../Stock-Market-Prediction/app/$name.csv")
+        return spark.read.option("header", "true").csv(s"../Stock-Market-Prediction/public/$name.csv")
     }
 
 }

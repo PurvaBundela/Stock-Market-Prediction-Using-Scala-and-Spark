@@ -38,9 +38,6 @@ class CalcAvgScoreTest extends  FlatSpec with Matchers {
     CalcAvgScore.calcSentiment("eBay Inc",1,false) shouldBe 1.0 +- 2.5
   }
 
-  it should "stock of Tripadvisor" in {
-    CalcAvgScore.calcSentiment("Tripadvisor Inc",1,false) shouldBe 1.0 +- 2.5
-  }
 
 
 }

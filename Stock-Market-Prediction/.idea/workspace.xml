@@ -23,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/test/Util/TimeseriesTest.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="e#14#43#0" expanded="true" />
               </folding>
@@ -44,8 +44,8 @@
       <file leaf-file-name="CalcAvgScoreTest.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Util/CalcAvgScoreTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+            <state relative-caret-position="342">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/app/Util/CalcAvgScore.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="19" />
+              <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -74,9 +74,11 @@
       <file leaf-file-name="TwitterMain.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Util/TwitterMain.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="67" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="114">
+              <caret line="69" column="58" lean-forward="false" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+              <folding>
+                <element signature="e#14#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,11 +86,11 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="488" column="0" lean-forward="true" selection-start-line="488" selection-start-column="0" selection-end-line="488" selection-end-column="0" />
+            <state relative-caret-position="737">
+              <caret line="496" column="0" lean-forward="false" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
               <folding>
-                <marker date="1524547829132" expanded="true" signature="38551:38568" ph="..." />
-                <marker date="1524547829132" expanded="true" signature="38551:38599" ph="..." />
+                <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+                <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
               </folding>
             </state>
           </provider>
@@ -136,6 +138,7 @@
         <option value="$PROJECT_DIR$/app/views/recomendation.scala.html" />
         <option value="$PROJECT_DIR$/test/Util/CalcAvgScoreTest.java" />
         <option value="$PROJECT_DIR$/test/Util/SentimentAnalysisTest.scala" />
+        <option value="$PROJECT_DIR$/app/Util/TwitterMain.scala" />
         <option value="$PROJECT_DIR$/test/Util/CalcAvgScoreTest.scala" />
       </list>
     </option>
@@ -445,6 +448,9 @@
     <history-entry file="CalcAvgScoreTest - 2018.04.24 at 01h 31m 03s.xml">
       <configuration name="CalcAvgScoreTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="CalcAvgScoreTest - 2018.04.24 at 01h 38m 22s.xml">
+      <configuration name="CalcAvgScoreTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
     <history-entry file="SentimentAnalysisTest - 2018.04.24 at 01h 16m 58s.xml">
       <configuration name="SentimentAnalysisTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -462,11 +468,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4388000" />
+    <option name="totallyTimeSpent" value="5546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -486,8 +491,8 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -543,8 +548,8 @@
         <state relative-caret-position="24">
           <caret line="161" column="78" lean-forward="false" selection-start-line="161" selection-start-column="78" selection-end-line="161" selection-end-column="78" />
           <folding>
-            <marker date="1524547829132" expanded="true" signature="38551:38568" ph="..." />
-            <marker date="1524547829132" expanded="true" signature="38551:38599" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
           </folding>
         </state>
       </provider>
@@ -554,8 +559,8 @@
         <state relative-caret-position="-3915">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1524547829132" expanded="true" signature="38551:38568" ph="..." />
-            <marker date="1524547829132" expanded="true" signature="38551:38599" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
           </folding>
         </state>
       </provider>
@@ -602,7 +607,7 @@
     <entry file="file://$PROJECT_DIR$/test/Util/TimeseriesTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
             <element signature="e#14#43#0" expanded="true" />
           </folding>
@@ -611,20 +616,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="488" column="0" lean-forward="true" selection-start-line="488" selection-start-column="0" selection-end-line="488" selection-end-column="0" />
+        <state relative-caret-position="737">
+          <caret line="496" column="0" lean-forward="false" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
           <folding>
-            <marker date="1524547829132" expanded="true" signature="38551:38568" ph="..." />
-            <marker date="1524547829132" expanded="true" signature="38551:38599" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39154" ph="..." />
+            <marker date="1524548983574" expanded="true" signature="39137:39185" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Util/CalcAvgScore.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,14 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Util/TwitterMain.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" column="67" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -652,10 +641,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Util/CalcAvgScore.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Util/TwitterMain.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="69" column="58" lean-forward="false" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+          <folding>
+            <element signature="e#14#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/Util/CalcAvgScoreTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+        <state relative-caret-position="342">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>

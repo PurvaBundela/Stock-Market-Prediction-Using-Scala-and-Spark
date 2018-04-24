@@ -35,6 +35,7 @@ object SentimentAnalysis {
 
   }
 
+ 
 
   trait SENTIMENT_TYPE
   case object VERY_NEGATIVE extends SENTIMENT_TYPE
@@ -44,17 +45,13 @@ object SentimentAnalysis {
   case object VERY_POSITIVE extends SENTIMENT_TYPE
   case object NOT_UNDERSTOOD extends SENTIMENT_TYPE
 
-
   def replaceSpecialChar(s: String): String = s.replaceAll("[^\\p{L}\\p{N}\\p{Z}\\p{Sm}\\p{Sc}\\p{Sk}\\p{Pi}\\p{Pf}\\p{Pc}\\p{Mc}]","")
 
   def detectSentimentScore(message: String, catchlog: Boolean = true): Double = {
-
     if (catchlog == true) RedwoodConfiguration.empty().capture(System.err).apply()
 
     val pipeline = new StanfordCoreNLP(nlpProps)
-
     val annotation = pipeline.process(replaceSpecialChar(message))
-
     val slp = for (sentence <- annotation.get(classOf[CoreAnnotations.SentencesAnnotation])) yield {
       val tree = sentence.get(classOf[SentimentCoreAnnotations.SentimentAnnotatedTree])
       val sentiment = RNNCoreAnnotations.getPredictedClass(tree)
@@ -67,11 +64,6 @@ object SentimentAnalysis {
     val weightedSentiment = weightedSentiments.sum / sizes.sum
 
     if (catchlog == true) RedwoodConfiguration.current().clear().apply()
-
-    //println("debug: main: " + mainSentiment)
-    //println("debug: avg: " + averageSentiment)
-    //println("debug: weighted: " + weightedSentiment)
-
     /*
      0 -> very negative
      1 -> negative

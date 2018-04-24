@@ -10,10 +10,6 @@ import slick.driver.MySQLDriver.api._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-/**
-  * Created by akashnagesh on 4/8/17.
-  */
-
 object UserActionMessages {
   val emailAlreadyExists = "DUPLICATE_EMAIL"
   val userInsertionSuccessfull = "USER_INSERTED"

@@ -1,5 +1,6 @@
-package Util
+package services
 
+import Util._
 import spray.json.DefaultJsonProtocol
 
 import scala.util._

@@ -13,7 +13,7 @@ import scala.collection.JavaConversions._
   *
   * reference:https://github.com/vspiewak/twitter-sentiment-analysis/blob/master/src/main/scala/com/github/vspiewak/util/SentimentAnalysisUtils.scala
   */
-object SentimentUtils {
+object SentimentAnalysis {
 
   val nlpProps = {
     val props = new Properties()

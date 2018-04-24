@@ -88,30 +88,6 @@ libraryDependencies += "com.github.fommil.netlib" % "all" % "1.1.2"
 // https://mvnrepository.com/artifact/com.cloudera.sparkts/sparkts
 libraryDependencies += "com.cloudera.sparkts" % "sparkts" % "0.4.0"
 
-// https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
-//libraryDependencies += "org.apache.kafka" % "kafka-clients" % "0.10.0.0"
-
-
-// https://mvnrepository.com/artifact/org.apache.hbase/hbase
-libraryDependencies += "org.apache.hbase" % "hbase" % "1.2.4"
-
-// https://mvnrepository.com/artifact/org.apache.hbase/hbase-shaded-client
-libraryDependencies += "org.apache.hbase" % "hbase-shaded-client" % "1.2.4"
-
-// https://mvnrepository.com/artifact/org.apache.hbase/hbase-client
-libraryDependencies += "org.apache.hbase" % "hbase-client" % "1.2.4"
-
-// https://mvnrepository.com/artifact/org.apache.hbase/hbase-server
-libraryDependencies += "org.apache.hbase" % "hbase-server" % "1.2.4" excludeAll  ExclusionRule(organization = "org.mortbay.jetty")
-
-// https://mvnrepository.com/artifact/org.apache.hbase/hbase-common
-libraryDependencies += "org.apache.hbase" % "hbase-common" % "1.2.4"
-
-
-libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "2.6.0" excludeAll (ExclusionRule(organization = "org.eclipse.jetty"))
-
-libraryDependencies += "org.apache.hadoop" % "hadoop-mapreduce-client-core" % "2.6.0"
-
 // https://mvnrepository.com/artifact/net.jpountz.lz4/lz4
 //libraryDependencies += "net.jpountz.lz4" % "lz4" % "1.2.0"
 
@@ -128,6 +104,7 @@ libraryDependencies += "org.scalamock" %% "scalamock-scalatest-support" % "3.5.0
 libraryDependencies += "com.github.nscala-time" %% "nscala-time" % "2.16.0"
 
 addCommandAlias("testCoverage", "; clean; coverage; test:test; coverageOff; coverageReport; coverageAggregate")
+
 
 
 

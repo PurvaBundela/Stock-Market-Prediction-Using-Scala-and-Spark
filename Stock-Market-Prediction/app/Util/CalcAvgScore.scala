@@ -1,25 +1,19 @@
 package Util
 
-
 import Util.SentimentAnalysis
 import twitter4j._
-
 import scala.util._
+import services.Response
 import Util.Ingest
 import java.util.Properties
-
-import services.Response
-
 import scala.io.{Codec, Source}
 
 object CalcAvgScore {
-
 
   System.setProperty("twitter4j.oauth.consumerKey", TwitterMain.ConsumerKey)
   System.setProperty("twitter4j.oauth.consumerSecret", TwitterMain.ConsumerSecret)
   System.setProperty("twitter4j.oauth.accessToken", TwitterMain.AccessToken)
   System.setProperty("twitter4j.oauth.accessTokenSecret", TwitterMain.AccessSecret)
-
 
   def calcSentiment(k: String = "", count: Int = 90, catchlog: Boolean = true): Double = {
     val ingester = new Ingest[Response]()

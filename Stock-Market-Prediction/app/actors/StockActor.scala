@@ -24,18 +24,13 @@ object StockActor {
 
 class StockActor extends Actor {
     val test1 = Timeseries.trainAndPredictPrice()
-    //Thread.sleep(20000)
-    //test1.foreach(x=>println(x))
   def receive: Receive = {
     case Stock(name:String) =>
       sender() ! name
 
     case getStocks(test:String) => {
-      print("in getsticks")
-      val a = test1
-      //a.foreach(x=>x.toString().concat())
-      //Thread.sleep(20000)
 
+      val a = test1
       sender() ! a
 
 

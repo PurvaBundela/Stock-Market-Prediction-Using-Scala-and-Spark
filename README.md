@@ -17,29 +17,50 @@ https://prezi.com/view/Lr7sPPoyMfhfscPKTesr/
 To examine a number of different forecasting techniques to predict future stock returns based on past returns and numerical news indicators to construct a portfolio of multiple stocks in order to diversify the risk. We do this by applying supervised learning methods for stock price forecasting by interpreting the seemingly chaotic market data.
 
 # Methodology
+## Data cleaning and parsing
+1.  Data from all the companies CSV was loaded into dataframes and converted to format required by ARIMA model.
+
 ## Spark Timeseries Methodology
-A time series is a series of data points indexed (or listed or graphed) in time order. Most commonly, a time series is a sequence taken at successive equally spaced points in time.
+1. A time series is a series of data points indexed (or listed or graphed) in time order. Most commonly, a time series is a sequence taken at successive equally spaced points in time.
 
-Preprocessing and cleaning the data Using Scala.
+2. Company name and dates were taken as features to train the data using ARIMA model.
 
-Feature extraction and load into RDD Using Scala.
+3. Dataframes of all the companies were joined and loaded to RDD.
 
-Training the data using ARIMA model and forecasting the output.
+4. Using ARIMA model data is trained and model is then used for forecasting future values.
 
-Parse data into desired format and visualize the data.
+5. Using forecast method of ARIMA model stock prices for 30 days.
 
 ## Twitter Sentiment Analysis
-Tweets acquired by Search API are in JSON format with a maximum limit of 100 per request. Built a JSON parser to correctly parse the and filter those attributes which are not required.
+1. Tweets acquired by Search API are in JSON format with a maximum limit of 100 per request. Built a JSON parser to correctly parse the and filter those attributes which are not required.
 
-Special characters are removed to increase the accuracy of the sentiment scores.
+2. Special characters are removed to increase the accuracy of the sentiment scores.
 
-Using Stanford NLP to calculate the sentiment score which tells whether the particular tweet is positive or negative.
+3. Using Stanford NLP to calculate the sentiment score which tells whether the particular tweet is positive or negative.
 
-Using Spark Streaming to receive the stream of tweets and perform the analysis for past 7 days.
+4. Using Spark Streaming to receive the stream of tweets and perform the analysis for past 7 days.
 
+## Web Application and Visualization
+1. Web application is created using Play framework.
+
+2. Data is send from controller to view using Akka framework.
+
+2. User should be able to either signUp or login to view the dashboard.
+
+3. To show the analysis, d3.js is used
 
 # Steps to run the project on the local machine
+## Run on windows and mac
 
+1. Download sbt 0.13.17 
+
+2. Configure Java 1.8 on your machine
+
+3. Configure scala 2.11.8 on your machine
+
+4. To run from terminal go to the Stock-Market-Prediction and write sbt run.
+
+5. Also make sure to configure your database in config file so that you can signUp and login to the application.
 
 
 # Dataset

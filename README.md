@@ -77,13 +77,18 @@ We trained the model with the data of 10 companies and 15000 rows.
 # Details
 used HDFS to store dataset
 
-utilized Spark to read and pre-process the dataset
+utilized Spark to read and pre-process the dataset.
 
-applied Stanford NLP to do sentiment analysis on twitter data
+used Play framework for web application.
 
-applied Spark-ML to train a Timeseries model
+applied Stanford NLP to do sentiment analysis on twitter data.
 
-assessed the accuracy with R square and RMSE
+applied Spark-ML to train a Timeseries model.
+
+assessed the accuracy with R square and RMSE.
+
+To show the analysis and visualization, d3.js is used
+
 # Continuous Integration
 
 This project is using Travis CI as the continuous integration tool  [![Build Status](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark.svg?branch=master)](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3ac16119b50b4677bf6be68eb36a518a)](https://www.codacy.com/app/dishanks9/Stock-Market-Prediction-Using-Scala-and-Spark?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dishanks9/Stock-Market-Prediction-Using-Scala-and-Spark&amp;utm_campaign=Badge_Grade)

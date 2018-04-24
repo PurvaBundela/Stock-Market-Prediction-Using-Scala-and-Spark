@@ -36,41 +36,12 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
     * will be called when the application receives a `GET` request with
     * a path of `/`.
     */
-  //val logger = play.Logger.of("airbnb_logger")
-  //val logger = play.Logger.of("airbnb_logger")
 
   val loginRouter = system.actorOf(Props(classOf[LoginActor], userDalImpl).withRouter(RoundRobinPool(10)), name = "LoginActor")
   def index = Action { implicit request =>
     //logger.info("User in landing page")
     Ok(views.html.index(FormsData.userForm)(FormsData.createUserForm)(StringUtils.EMPTY))
   }
-
-
-//    val stockRouter = system.actorOf(StockActor.props,"Test")
-//    implicit val timeout: Timeout = 30.seconds
-//  def userLogin = Action.async {
-//      implicit request =>
-//          Supervision.Restart
-//         println("userlogin")
-//      (stockRouter ? getStocks("abc")).mapTo[Double].map{
-//          abc => Ok(views.html.loggedInPage(abc))
-//      }
-////
-////
-//////
-//////
-////      FormsData.userForm.bindFromRequest().fold(
-////        formWithErrors => Future.successful(BadRequest),
-////          abc => {
-////              stockRouter ? StockActor.Stock("abc")
-////          }.mapTo[String].map {
-////              Ok(views.html.loggedInPage(abc))
-////////          case Some(user) =>
-////////          case None => Ok("Invalid credentials")
-//////        }
-////      )
-//  }
-    //val abc = Util.Timeseries.trainAndPredictPrice()
 
     def userLogin = Action.async {
         implicit request =>
@@ -85,31 +56,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(u
                 }
             )
     }
-
-  //    val stockRouter = system.actorOf(StockActor.props,"Test")
-  //    implicit val timeout: Timeout = 30.seconds
-  //  def userLogin = Action.async {
-  //      implicit request =>
-  //          Supervision.Restart
-  //         println("userlogin")
-  //      (stockRouter ? getStocks("abc")).mapTo[Double].map{
-  //          abc => Ok(views.html.loggedInPage(abc))
-  //      }
-  ////
-  ////
-  //////
-  //////
-  ////      FormsData.userForm.bindFromRequest().fold(
-  ////        formWithErrors => Future.successful(BadRequest),
-  ////          abc => {
-  ////              stockRouter ? StockActor.Stock("abc")
-  ////          }.mapTo[String].map {
-  ////              Ok(views.html.loggedInPage(abc))
-  ////////          case Some(user) =>
-  ////////          case None => Ok("Invalid credentials")
-  //////        }
-  ////      )
-  //  }
 
 
   def recomendation = Action {

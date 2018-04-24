@@ -22,6 +22,7 @@ object Timeseries extends App{
         trainAndPredictPrice()
     }
 
+    
     //Create spark conf
     lazy val conf = {
         new SparkConf(false).setMaster("local[*]").setAppName("Stock-prediction").set("spark.logconf","true")

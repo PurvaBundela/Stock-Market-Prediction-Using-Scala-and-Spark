@@ -15,6 +15,25 @@ https://prezi.com/view/Lr7sPPoyMfhfscPKTesr/
 ## Abstract
 
 ## Methodology
+# Spark Timeseries Methodology
+A time series is a series of data points indexed (or listed or graphed) in time order. Most commonly, a time series is a sequence taken at successive equally spaced points in time.
+
+Preprocessing and cleaning the data Using Scala.
+
+Feature extraction and load into RDD Using Scala.
+
+Training the data using ARIMA model and forecasting the output.
+
+Parse data into desired format and visualize the data.
+
+# Twitter Sentiment Analysis
+Tweets acquired by Search API are in JSON format with a maximum limit of 100 per request. Built a JSON parser to correctly parse the and filter those attributes which are not required.
+
+Special characters are removed to increase the accuracy of the sentiment scores.
+
+Using Stanford NLP to calculate the sentiment score which tells whether the particular tweet is positive or negative.
+
+Using Spark Streaming to receive the stream of tweets and perform the analysis for past 7 days.
 
 
 ## Steps to run the project on the local machine

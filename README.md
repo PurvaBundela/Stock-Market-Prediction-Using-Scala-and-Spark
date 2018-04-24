@@ -12,10 +12,10 @@ Dishank Shah  shah.di@husky.neu.edu
 # Final Presentation
 https://prezi.com/view/Lr7sPPoyMfhfscPKTesr/
 
-## Abstract
+ # Abstract
 
-## Methodology
-# Spark Timeseries Methodology
+# Methodology
+## Spark Timeseries Methodology
 A time series is a series of data points indexed (or listed or graphed) in time order. Most commonly, a time series is a sequence taken at successive equally spaced points in time.
 
 Preprocessing and cleaning the data Using Scala.
@@ -26,7 +26,7 @@ Training the data using ARIMA model and forecasting the output.
 
 Parse data into desired format and visualize the data.
 
-# Twitter Sentiment Analysis
+## Twitter Sentiment Analysis
 Tweets acquired by Search API are in JSON format with a maximum limit of 100 per request. Built a JSON parser to correctly parse the and filter those attributes which are not required.
 
 Special characters are removed to increase the accuracy of the sentiment scores.
@@ -36,11 +36,11 @@ Using Stanford NLP to calculate the sentiment score which tells whether the part
 Using Spark Streaming to receive the stream of tweets and perform the analysis for past 7 days.
 
 
-## Steps to run the project on the local machine
+# Steps to run the project on the local machine
 
 
 
-## Dataset
+# Dataset
 SNAP Twitter7 dataset
 
 Yahoo Finance Stocks dataset
@@ -50,7 +50,7 @@ The dataset was taken from Kaggle and had data for around 500 companies.
 Each data file had 8 columns 
 
 We trained the model with the data of 10 companies and 15000 rows.
-## Details
+# Details
 used HDFS to store dataset
 
 utilized Spark to read and pre-process the dataset
@@ -60,7 +60,7 @@ applied Stanford NLP to do sentiment analysis on twitter data
 applied Spark-ML to train a Timeseries model
 
 assessed the accuracy with R square and RMSE
-## Continuous Integration
+# Continuous Integration
 
 This project is using Travis CI as the continuous integration tool  [![Build Status](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark.svg?branch=master)](https://travis-ci.org/PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ca8d184a3abc4c1eb0d570df9a75ab33)](https://www.codacy.com/app/dishanks9/Stock-Market-Prediction-Using-Scala-and-Spark_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PurvaBundela/Stock-Market-Prediction-Using-Scala-and-Spark&amp;utm_campaign=Badge_Grade)
 

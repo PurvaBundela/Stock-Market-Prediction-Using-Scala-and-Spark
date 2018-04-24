@@ -8,7 +8,7 @@ object SparkCommons {
   lazy val conf = {
     new SparkConf(false)
         .setMaster("local[*]")
-    .setAppName("AirBnb")
+    .setAppName("Stock-market")
     .set("spark.logconf","true")
   }
 

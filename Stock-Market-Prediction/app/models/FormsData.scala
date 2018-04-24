@@ -3,9 +3,6 @@ package models
 import play.api.data.Form
 import play.api.data.Forms.{mapping, nonEmptyText, number, tuple,email}
 
-/**
-  * Created by vinay on 4/5/17.
-  */
 object FormsData {
 
   val userForm = Form(

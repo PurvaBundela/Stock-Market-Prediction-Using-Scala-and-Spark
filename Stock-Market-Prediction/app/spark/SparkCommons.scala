@@ -3,15 +3,12 @@ package spark
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
-/**
-  * Created by akashnagesh on 4/18/17.
-  */
 object SparkCommons {
 
   lazy val conf = {
     new SparkConf(false)
         .setMaster("local[*]")
-    .setAppName("AirBnb")
+    .setAppName("Stock-market")
     .set("spark.logconf","true")
   }
 

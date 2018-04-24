@@ -1,0 +1,5 @@
+package Util
+
+class CalcAvgScoreTest {
+
+}
